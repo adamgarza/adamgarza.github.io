@@ -1,10 +1,10 @@
 
 ![Google Summer of Code](https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-logo-horizontal.svg)
-&nbsp;&nbsp; **+** ![OpenCensus](img/opencensus_logo.svg)
+&nbsp; ![OpenCensus](img/opencensus_logo.svg)
 
 <br />
 
-## Migrate OpenCensus.io into HUGO markdown theme + Develope OpenCensus Zpages UI
+## Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI
 
 ---
 ### What is OpenCensus
@@ -35,13 +35,17 @@ The various OpenCensus development teams were in need of a fast and easy method 
 
 I proposed converting the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I accepted this as a programming challenge and had to quickly learn it on the fly.
 
+<br />
+
 #### Challenges in Migration
 At Web Development I'm a wiz, so I thought "Hey, I can do this easily." In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.  
 
-<a id="migrate-commits"></a>
-#### Website Commits
+<br />
 
-Dates | Commit Description  |
+<a id="migrate-commits"></a>
+#### Website Migration Commits List by Date
+
+Date | Commit Description  |
 ----------------| --------------------|
 May 9, 2018     | [LICENSE and AUTHORS added (#65)](https://github.com/census-instrumentation/opencensus-website/commit/fd1d0a62d653b2fece03190687c2b44487d19ae0) |
 May 16, 2018    | [Updated blog posts (#66)](https://github.com/census-instrumentation/opencensus-website/commit/add8c9913cb0c45a7a095c75297543a3ae3b641a) |
@@ -66,8 +70,12 @@ Jul 16, 2018    | [Updated node.js stats as supported on languages table (#177)]
 Jul 19, 2018    | [Included svg images for Stackdriver, Zipkin, Jaeger and Prometheus logos (#181)](https://github.com/census-instrumentation/opencensus-website/commit/90feb88ad200230914748d78c2cea4375af3b31b) |
 Jul 19, 2018    | [All partner logos have been replaced with high quality images (#183)](https://github.com/census-instrumentation/opencensus-website/commit/dfa74dcdf237d31f9a31ab3ee01e48601072e42c) |
 
-[Commit list Authored by Adam Garza](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
-<br/>
+
+#### Centralized Migration Commits | authored by Adam Garza found [Here.](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
+<br />
+
+---
+<br />
 
 <a id="zpages"></a>
 ### 2. Develope OpenCensus Zpages UI
