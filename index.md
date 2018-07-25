@@ -1,6 +1,6 @@
 
 ![Google Summer of Code](https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-logo-horizontal.svg)
-&nbsp; ![OpenCensus](img/opencensus_logo.svg)
+&nbsp ![OpenCensus](img/opencensus_logo.svg)
 
 <br />
 
@@ -128,7 +128,7 @@ private static final String STYLE;
 <a id="zpages-commits"></a>
 #### Zpage Commits
 
-Dates | Commit Description  |
+Date | Commit Description  |
 ----------------| --------------------|
 Jun 10, 2018    | [Rpcz, Statsz, Tracez, and Traceconfigz page styling modifications (#1295)](https://github.com/census-instrumentation/opencensus-java/commit/2d1e5c8486bbb5f1101a057d7e044dc60f80a50d)
 Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this resource (#1341)](https://github.com/census-instrumentation/opencensus-java/commit/53fc5f0e49eab37fc814f38b11352c9b19e83fe1)
