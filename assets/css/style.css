@@ -152,7 +152,7 @@ h3, h4, h5, h6 { color: #3D3D3D; }
 
 a { color: #A94442; text-decoration: none; }
 
-a:hover, a:focus { color: #A94442; font-weight: bold; }
+a:hover, a:focus { color: #A94442; text-decoration: underline; }
 
 a small { font-size: 11px; color: #777; margin-top: -0.3em; display: block; }
 
