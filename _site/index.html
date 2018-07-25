@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Adam Garza GSoC2018 | Migrate OpenCensus.io into HUGO markdown theme + Develope OpenCensus Zpages UI</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Adam Garza GSoC2018" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Migrate OpenCensus.io into HUGO markdown theme + Develope OpenCensus Zpages UI" />
+<meta property="og:description" content="Migrate OpenCensus.io into HUGO markdown theme + Develope OpenCensus Zpages UI" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Adam Garza GSoC2018" />
+<script type="application/ld+json">
+{"name":"Adam Garza GSoC2018","description":"Migrate OpenCensus.io into HUGO markdown theme + Develope OpenCensus Zpages UI","@type":"WebSite","url":"http://localhost:4000/","headline":"Adam Garza GSoC2018","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=33fb037ba8d6df67331e43b1fb7576c1dff0e4b9">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">Adam Garza GSoC2018</a></h1>
+        
+        
+
+        <p>Migrate OpenCensus.io into HUGO markdown theme + Develope OpenCensus Zpages UI</p>
+
+        
+        <p class="view"><a href="http://github.com/adamgarza/adamgarza.github.io">View the Project on GitHub <small>adamgarza/adamgarza.github.io</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      
+<p><img src="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-logo-horizontal.svg" alt="Google Summer of Code" />
+   <img src="/img/opencensus_logo.svg" alt="OpenCensus" /></p>
+
+<p><br /></p>
+
+<h2 id="migrate-opencensusio-into-hugo-markdown-theme--develope-opencensus-zpages-ui">Migrate OpenCensus.io into HUGO markdown theme + Develope OpenCensus Zpages UI</h2>
+
+<hr />
+<h3 id="what-is-opencensus">What is OpenCensus</h3>
+<p>OpenCensus is single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and sends them to any analysis tool.</p>
+
+<hr />
+<p><br /></p>
+<h2 id="table-of-content">Table of Content</h2>
+
+<h3 id="1-migrate-opencensusio-into-a-hugo-markdown-theme">1. <a href="#migrate">Migrate OpenCensus.io into a HUGO markdown theme</a></h3>
+<ul>
+  <li>1.1 <a href="#migrate-commits">The Commits</a></li>
+</ul>
+
+<h3 id="2-develope-opencensus-zpages-ui">2. <a href="#zpages">Develope OpenCensus Zpages UI</a></h3>
+<ul>
+  <li>1.1 <a href="#zpages-commits">The Commits</a></li>
+</ul>
+
+<h3 id="3-overall-experience">3. <a href="#experience">Overall Experience</a></h3>
+
+<h3 id="4-final-thoughts">4. <a href="#final">Final Thoughts</a></h3>
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
+<p><a id="migrate"></a></p>
+<h3 id="1-migrate-opencensusio-into-a-hugo-markdown-theme-1">1. Migrate OpenCensus.io into a HUGO markdown theme</h3>
+<p>The various OpenCensus development teams were in need of a fast and easy method to add and update their corresponding section of documenation on the OpenCensus.io website. The use of markdown allows them to do so with ease. Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from cumbersome HTML modifications, allowing them to focus on the quality and accuracy of content.</p>
+
+<p>I proposed converting the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I accepted this as a programming challenge and had to quickly learn it on the fly.</p>
+
+<h4 id="challenges-in-migration">Challenges in Migration</h4>
+<p>At Web Development I’m a wiz, so I thought “Hey, I can do this easily.” In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.</p>
+
+<p><a id="migrate-commits"></a></p>
+<h4 id="website-commits">Website Commits</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dates</th>
+      <th>Commit Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>May 9, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/fd1d0a62d653b2fece03190687c2b44487d19ae0">LICENSE and AUTHORS added (#65)</a></td>
+    </tr>
+    <tr>
+      <td>May 16, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/add8c9913cb0c45a7a095c75297543a3ae3b641a">Updated blog posts (#66)</a></td>
+    </tr>
+    <tr>
+      <td>May 26, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/c212cef05ddc9efadfa821c891dee048ae02241e">Modified Docs, Overview, Roadmap and created GogRPC (#68)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 4, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/fd4a91371cb221483db8c75964321f5876f17ed9">Initial PR for Hugo theme - markdown (#69)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 6, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/cd66fcf0db2bce8815c873db6853030b967c07e6">Updated README, modified docs.md for improved mobile rendering, cleaned shortcodes (#80)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 8, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/d9fb4b09c32d844c8c0932edd35380a0c20fc396">Optimizing Docs, FAQ &amp; Roadmap pages for mobile (#81)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 11, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/81248096613ed386d87349ae36fbdb20f01037b7">Added partners/branding + github-corner disappears on mobile view (#84)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 12, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/4db4c343066ca6d51bbbeb801cf3e8a031da4629">Landing navbar fix (#85)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 13, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/6b2d0e69e5f54cda133d213c57db066826c23247">Thinned out navbar &amp; shrunk banner height on landing (#89)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 14, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/da81c9e29fa79a31a99162231bb23d43a7aeb108">Updated README Hugo version and pointing tutorials link to spanner (#90)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 14, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/5380dbf0da4a3659014423cbd894499b2447adbc">New Blog entry &amp; some CSS to help (#91)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 16, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/aea30970c2390826049d62d7705b8588a635fc06">added new blog entry, and link to the same blog on the overview page (#92)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 16, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/1b4ee3130c5454da7b01de19339551366dd7f31a">Shifted Nic Munroe blog link to top of Overview page (#93)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 19, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/0ff791409eafa9abe9bf7b8f48e99a04653284a2">Added Ben Ripkens quote to top of Index and removed the last sentence in About - Who is behind OpenCensus (#97)</a></td>
+    </tr>
+    <tr>
+      <td>Jun 19, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/fad5343d1b49d66979c770c125d3d192f7231ed7">Dropped Ben Ripkens name down to new line (#98)</a></td>
+    </tr>
+    <tr>
+      <td>Jul 9, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/06badd9f5d836904d1d7e2e214a5d50e2d32fb17">Fixed licensing on the footer to reflect Apache License 2.0 (#163)</a></td>
+    </tr>
+    <tr>
+      <td>Jul 12, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/8d807664cffd0dc7486c4aef2883eeded8a84872">Added Datadog logo to partners &amp; contributors section (#165)</a></td>
+    </tr>
+    <tr>
+      <td>Jul 13, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/64e58db1cec24d6b0e088bdc9b59e39a88e090da">Updated Who is Behind OC and added Microsoft+Solarwinds to partners section on index, added new blog entry (#168)</a></td>
+    </tr>
+    <tr>
+      <td>Jul 13, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/75a82b1c9590256dfb9bdc4413b8e5b6f19151ab">Replaced markup with markdown in blog.md (#170)</a></td>
+    </tr>
+    <tr>
+      <td>Jul 16, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/701f94daaa6358b9551ab2da40298e8e89bf5a24">Updated node.js stats as supported on languages table (#177)</a></td>
+    </tr>
+    <tr>
+      <td>Jul 19, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/90feb88ad200230914748d78c2cea4375af3b31b">Included svg images for Stackdriver, Zipkin, Jaeger and Prometheus logos (#181)</a></td>
+    </tr>
+    <tr>
+      <td>Jul 19, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-website/commit/dfa74dcdf237d31f9a31ab3ee01e48601072e42c">All partner logos have been replaced with high quality images (#183)</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza">Commit list Authored by Adam Garza</a>
+<br /></p>
+
+<p><a id="zpages"></a></p>
+<h3 id="2-develope-opencensus-zpages-ui-1">2. Develope OpenCensus Zpages UI</h3>
+
+<h4 id="what-are-zpages">What are Zpages?</h4>
+<p>In OpenCensus, zpages implements a collection of HTML pages that display RPC stats and trace data. My task was to standardize the look and feel of the multiple zpages.</p>
+<ol>
+  <li>Rpcz</li>
+  <li>Statsz</li>
+  <li>Tracez</li>
+  <li>Traceconfigz</li>
+</ol>
+
+<p>To acheive the base UI, I began work on the most complete set of Zpages built in Java. But, since OpenCensus will support multiple languages, I had to also create an external CSS of commonalities among the variaous zpages to be used across all languages. Basically, we need the zpages for all the supported languages to look and feel the same. To save myself from having to style each of the four zpages for every language supported, a single external CSS can acheive this, as well as, making changes in a single location very accommodating.</p>
+
+<h4 id="chalenges-in-zpages">Chalenges in Zpages</h4>
+<p>Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor has a unique programming style.</p>
+
+<p>Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS, and use a Gradle build for resource availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). Although, I</p>
+
+<p>Gradle build lines added:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sourceSets.main.resources.srcDirs = [ "src/resources/" ]
+sourceSets.main.resources.includes = [ "**/*.css" ]
+</code></pre></div></div>
+
+<p>Java rpcz handler lines added:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">CSS_PATH</span> <span class="o">=</span>
+        <span class="s">"/Users/username/Desktop/opencensus-java"</span> <span class="o">+</span>
+        <span class="s">"/contrib/zpages/src/resources/style.css"</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>Java method for reading in the CSS:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">STYLE</span><span class="o">;</span>
+  <span class="kd">static</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">style</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">Reader</span> <span class="n">fileReader</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newBufferedReader</span><span class="o">(</span><span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">CSS_PATH</span><span class="o">),</span> <span class="n">UTF_8</span><span class="o">);</span>
+      <span class="kt">char</span><span class="o">[]</span> <span class="n">chars</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="o">[</span><span class="mi">100000000</span><span class="o">];</span>
+      <span class="n">fileReader</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">chars</span><span class="o">);</span>
+      <span class="n">style</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">chars</span><span class="o">);</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">();</span>
+    <span class="o">}</span>
+    <span class="n">STYLE</span> <span class="o">=</span> <span class="n">style</span><span class="o">;</span>
+  <span class="o">}</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<p><a id="zpages-commits"></a></p>
+<h4 id="zpage-commits">Zpage Commits</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dates</th>
+      <th>Commit Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jun 10, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-java/commit/2d1e5c8486bbb5f1101a057d7e044dc60f80a50d">Rpcz, Statsz, Tracez, and Traceconfigz page styling modifications (#1295)</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<hr />
+<p><br />
+<a id="experience"></a></p>
+<h2 id="overall-experiance">Overall Experiance</h2>
+<p>Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and colaborative development were all forgien to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it… as an effort to breakout of my comfort zone and force myself to quickly learn and adapt.</p>
+
+<p><br /></p>
+
+<p><a id="final"></a></p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>I am not much of a write, but I will try to make this as elequent as possible. In full disclosure, knowing this program is such an enormouse opportunity for me as a new developers, I’m certain I placed an overwhelming pressure upon myself to acheive. I’ve always considered myself a below average programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in know-how, I more make up for in determination.  It was stressful, chalLenging, and rewarding for sure.  We all have goals and dreams and my participation in Google Summer of Code 2018 gets me one step closer to realizing that dream.</p>
+
+<blockquote>
+  <p>Many have made great sacrifices in order for me to have the oppotunities I have today. There is no better way to repay those sactifices, than to acheive when those opportunities are presented, making things better for those generations who follow behind me.</p>
+</blockquote>
+
+<p>- Adam Garza</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/adamgarza">adamgarza</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>
