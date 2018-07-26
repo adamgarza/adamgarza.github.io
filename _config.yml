@@ -1,3 +1,6 @@
 theme: jekyll-theme-minimal
 title: Adam Garza GSoC2018
 description: Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI
+
+plugins:
+  - jekyll-seo-tag

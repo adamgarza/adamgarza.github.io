@@ -1,6 +1,6 @@
 
 ![Google Summer of Code](https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-logo-horizontal.svg)
-&nbsp ![OpenCensus](img/opencensus_logo.svg)
+&nbsp; ![OpenCensus](img/opencensus_logo.svg)
 
 <br />
 
