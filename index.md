@@ -45,15 +45,15 @@ OpenCensus is single distribution of libraries that automatically collects trace
 
 <a id="migrate"></a>
 ## 1. Migrate OpenCensus.io into a HUGO markdown theme
-The OpenCensus Development Contributors were in need of a fast and easy method to add & update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.
+The OpenCensus Development Team and Contributors were in need of a fast and easy method to add & update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.
 
-Part I, of my Google Summer of Code Proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.
+Part I, of my Google Summer of Code 2018 Proposal was to migrate the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC, I have never heard of markdown, much less know anything about the satic site generator platform of HUGO. I took this task as a programming challenge and dedicated myself to quickly learn these new platforms and concepts within a short time period. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO static site generator platform. The two topics were understandable. Straight out of the box, Hugo and markdown are simple to grasp and work with. The difficulty lies in the conversion of an existing HTML built site into a HUGO platform theme.
 
 <br />
 
 <a id="migrate-challenges"></a>
 ### Challenges in Migration
-At Web Development I'm a wiz, so I thought "Hey, I can do this easily." In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.  
+As I began to mention earlier, the concept and implementation of the HUGO platform and markdown use is easy to understand. At Web Development I'm a wizard, so I thought "Hey, I can do this easily." In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability & scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.  
 
 <br />
 
