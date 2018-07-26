@@ -20,9 +20,11 @@ OpenCensus is single distribution of libraries that automatically collects trace
 ### 2. [Develope OpenCensus Zpages UI](#zpages)
  * 1.1 [The Commits](#zpages-commits)
  
-### 3. [Overall Experience](#experience)
+### 3. [GSoC2018 Keynote Calendar](#calendar)
+ 
+### 4. [Overall Experience](#experience)
 
-### 4. [Final Thoughts](#final)
+### 5. [Final Thoughts](#final)
 <br />
 
 ---
@@ -89,6 +91,8 @@ In OpenCensus, zpages implements a collection of HTML pages that display RPC sta
 
 To acheive the base UI, I began work on the most complete set of Zpages built in Java. But, since OpenCensus will support multiple languages, I had to also create an external CSS of commonalities among the variaous zpages to be used across all languages. Basically, we need the zpages for all the supported languages to look and feel the same. To save myself from having to style each of the four zpages for every language supported, a single external CSS can acheive this, as well as, making changes in a single location very accommodating.
 
+<br />
+
 #### Chalenges in Zpages
 Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor has a unique programming style.
 
@@ -137,14 +141,25 @@ Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this
 
 ---
 <br />
+
+<a id="calendar"></a>
+## 3. GSoC2018 Keynote Calendar
+
+
+
+
+<br />
+
+---
+<br />
 <a id="experience"></a>
-## Overall Experiance 
+## 4. Overall Experiance 
 Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and colaborative development were all forgien to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and force myself to quickly learn and adapt.
 
 <br />
 
 <a id="final"></a>
-## Final Thoughts
+## 5. Final Thoughts
 I am not much of a write, but I will try to make this as elequent as possible. In full disclosure, knowing this program is such an enormouse opportunity for me as a new developers, I'm certain I placed an overwhelming pressure upon myself to acheive. I've always considered myself a below average programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in know-how, I more make up for in determination.  It was stressful, chalLenging, and rewarding for sure.  We all have goals and dreams and my participation in Google Summer of Code 2018 gets me one step closer to realizing that dream.
 
 >Many have made great sacrifices in order for me to have the oppotunities I have today. There is no better way to repay those sactifices, than to acheive when those opportunities are presented, making things better for those generations who follow behind me.
