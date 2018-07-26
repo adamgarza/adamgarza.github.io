@@ -19,7 +19,7 @@
 {"name":"Adam Garza GSoC2018","description":"Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI","@type":"WebSite","url":"http://localhost:4000/","headline":"Adam Garza GSoC2018","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=ccf726e03b2365b07330a7dd6d850b604519f38c">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ba130b294ec283a423d9f2d06bc63bd84576364e">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -86,20 +86,20 @@
 <p><br /></p>
 
 <p><a id="migrate"></a></p>
-<h3 id="1-migrate-opencensusio-into-a-hugo-markdown-theme-1">1. Migrate OpenCensus.io into a HUGO markdown theme</h3>
+<h2 id="1-migrate-opencensusio-into-a-hugo-markdown-theme-1">1. Migrate OpenCensus.io into a HUGO markdown theme</h2>
 <p>The OpenCensus Development Contributors were in need of a fast and easy method to add &amp; update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.</p>
 
 <p>Section 1 of my Google Summer of Code proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.</p>
 
 <p><br /></p>
 
-<h4 id="challenges-in-migration">Challenges in Migration</h4>
+<h3 id="challenges-in-migration">Challenges in Migration</h3>
 <p>At Web Development I’m a wiz, so I thought “Hey, I can do this easily.” In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.</p>
 
 <p><br /></p>
 
 <p><a id="migrate-commits"></a></p>
-<h4 id="website-migration-commits-list-by-date">Website Migration Commits List by Date</h4>
+<h3 id="website-migration-commits-list-by-date">Website Migration Commits List by Date</h3>
 
 <table>
   <thead>
@@ -200,16 +200,16 @@
   </tbody>
 </table>
 
-<h4 id="centralized-migration-commits--authored-by-adam-garza-found-here">Centralized Migration Commits | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza">Here.</a></h4>
+<h3 id="centralized-migration-commits--authored-by-adam-garza-found-here">Centralized Migration Commits | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza">Here.</a></h3>
 <p><br /></p>
 
 <hr />
 <p><br /></p>
 
 <p><a id="zpages"></a></p>
-<h3 id="2-develope-opencensus-zpages-ui-1">2. Develope OpenCensus Zpages UI</h3>
+<h2 id="2-develope-opencensus-zpages-ui-1">2. Develope OpenCensus Zpages UI</h2>
 
-<h4 id="what-are-zpages">What are Zpages?</h4>
+<h3 id="what-are-zpages">What are Zpages?</h3>
 <p>In OpenCensus, zpages implements a collection of HTML pages that display RPC stats and trace data. My task was to standardize the look and feel of the multiple zpages.</p>
 <ol>
   <li>Rpcz</li>
@@ -222,7 +222,7 @@
 
 <p><br /></p>
 
-<h4 id="chalenges-in-zpages">Chalenges in Zpages</h4>
+<h3 id="chalenges-in-zpages">Chalenges in Zpages</h3>
 <p>Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor has a unique programming style.</p>
 
 <p>Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS, and use a Gradle build for resource availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). Although, I</p>
@@ -256,7 +256,7 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 <p><br /></p>
 
 <p><a id="zpages-commits"></a></p>
-<h4 id="zpage-commits">Zpage Commits</h4>
+<h3 id="zpage-commits">Zpage Commits</h3>
 
 <table>
   <thead>

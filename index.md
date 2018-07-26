@@ -34,20 +34,20 @@ OpenCensus is single distribution of libraries that automatically collects trace
 <br />
 
 <a id="migrate"></a>
-### 1. Migrate OpenCensus.io into a HUGO markdown theme
+## 1. Migrate OpenCensus.io into a HUGO markdown theme
 The OpenCensus Development Contributors were in need of a fast and easy method to add & update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.
 
 Section 1 of my Google Summer of Code proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.
 
 <br />
 
-#### Challenges in Migration
+### Challenges in Migration
 At Web Development I'm a wiz, so I thought "Hey, I can do this easily." In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.  
 
 <br />
 
 <a id="migrate-commits"></a>
-#### Website Migration Commits List by Date
+### Website Migration Commits List by Date
 
 Date | Commit Description  |
 ----------------| --------------------|
@@ -75,16 +75,16 @@ Jul 19, 2018    | [Included svg images for Stackdriver, Zipkin, Jaeger and Prome
 Jul 19, 2018    | [All partner logos have been replaced with high quality images (#183)](https://github.com/census-instrumentation/opencensus-website/commit/dfa74dcdf237d31f9a31ab3ee01e48601072e42c) |
 
 
-#### Centralized Migration Commits | authored by Adam Garza found [Here.](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
+### Centralized Migration Commits | authored by Adam Garza found [Here.](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
 <br />
 
 ---
 <br />
 
 <a id="zpages"></a>
-### 2. Develope OpenCensus Zpages UI
+## 2. Develope OpenCensus Zpages UI
 
-#### What are Zpages?
+### What are Zpages?
 In OpenCensus, zpages implements a collection of HTML pages that display RPC stats and trace data. My task was to standardize the look and feel of the multiple zpages.
 1. Rpcz
 2. Statsz
@@ -95,7 +95,7 @@ To acheive the base UI, I began work on the most complete set of Zpages built in
 
 <br />
 
-#### Chalenges in Zpages
+### Chalenges in Zpages
 Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor has a unique programming style.
 
 Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS, and use a Gradle build for resource availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). Although, I 
@@ -132,7 +132,7 @@ private static final String STYLE;
 <br />
 
 <a id="zpages-commits"></a>
-#### Zpage Commits
+### Zpage Commits
 
 Date | Commit Description  |
 ----------------| --------------------|
