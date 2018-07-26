@@ -4,7 +4,7 @@
 
 <br />
 
-## OpenCensus.io migration: HUGO platform theme (w/Markdown) + ZPages UI development
+## OpenCensus.io Migration: HUGO Platform Theme (w/Markdown) + ZPages UI Development
 ### Read the complete GSoC 2018 Proposal - [Here](https://storage.googleapis.com/summerofcode-prod.appspot.com/gsoc/core_project/doc/5184261116657664_1521817377_Proposal_-_OpenCensus.pdf?Expires=1532667013&GoogleAccessId=summerofcode-prod%40appspot.gserviceaccount.com&Signature=7p44Nod2YW8zKeVUVevN1U9QTz5BcF9rzxU%2FKGJEVa%2F6cgJGQhiqe6UhnUIH8K3RiPeNjuWbympVSrGVRdZVK4BhEYRZW3tqpmjzX1%2BkKRiJW54JoOVeW%2B88u4j3xXB6%2B3wsrQV84zkIor4S3yZ2Xcp36lONGqldruMpTkul6%2F5FCyVP6H4o4bpIfGC%2B%2B5z0ccE3X4jpkyDFVaRJ5N8QDs5B1TF9J%2BuR%2FkrOCCTMq6a8%2BT6gBIyrmpONBd8E7OEbOEbP78N5%2BG1QqW1KkvVCoqGrllLdwLNFb%2BjxCpggXyBUhWmEqK7ON3HYK29JP2kxB%2FvuvpJiREE5tQS67LtPfQ%3D%3D) 
 <br />
 
