@@ -20,11 +20,13 @@ OpenCensus is single distribution of libraries that automatically collects trace
 ### 2. [Develope OpenCensus Zpages UI](#zpages)
  * 1.1 [The Commits](#zpages-commits)
  
-### 3. [My GSoC2018 Keynote Calendar](#calendar)
+### 3. [Google Summer of Code 2018 Timeline](#timeline) 
  
-### 4. [Overall Experience](#experience)
+### 4. [My GSoC 2018 Keynote Calendar](#calendar)
+ 
+### 5. [Overall Experience](#experience)
 
-### 5. [Final Thoughts](#final)
+### 6. [Final Thoughts](#final)
 <br />
 
 ---
@@ -33,9 +35,9 @@ OpenCensus is single distribution of libraries that automatically collects trace
 
 <a id="migrate"></a>
 ### 1. Migrate OpenCensus.io into a HUGO markdown theme
-The various OpenCensus development teams were in need of a fast and easy method to add and update their corresponding section of documenation on the OpenCensus.io website. The use of markdown allows them to do so with ease. Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from cumbersome HTML modifications, allowing them to focus on the quality and accuracy of content.
+The OpenCensus Development Contributors were in need of a fast and easy method to add & update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.
 
-I proposed converting the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I accepted this as a programming challenge and had to quickly learn it on the fly.
+Section 1 of my Google Summer of Code proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.
 
 <br />
 
@@ -142,16 +144,47 @@ Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this
 ---
 <br />
 
+<a id="timeline"></a>
+## 3. Google Summer of Code 2018 Timeline
+
+Date | Event |
+---- | ----- |
+Jan 4 |	Mentoring organizations can begin submitting applications to Google |
+Jan 23 | Mentoring organization application deadline |
+Jan 23 - Feb 11 |	Google program administrators review organization applications |
+Feb 12 | List of accepted mentoring organizations published |
+Feb 12 - Mar 12 |	Potential student participants discuss application ideas with mentoring organizations |
+Mar 12 | Student application period begins |
+Mar 27 | Student application deadline |
+Apr 23 | Accepted student proposals announced |
+Apr 23 - May 14 | Community Bonding Period	Students get to know mentors, read documentation, get up to speed to begin working on their projects |
+May 14 | Coding officially begins! |
+Jun 11 | Mentors and students can begin submitting Phase 1 evaluations |
+Jun 15 | Phase 1 Evaluation deadline |
+Jun 15 - Jul 9 | Work Period	Students work on their project with guidance from Mentors |
+Jul 9 | Mentors and students can begin submitting Phase 2 evaluations |
+Jul 13 | Phase 2 Evaluation deadline  |
+Jul 13 - Aug 6 | Work Period	Students continue working on their project with guidance from Mentors |
+Aug 6 - 14 | Final week: Students submit their final work product and their final mentor evaluation |
+Aug 14 - Aug 21 | Mentors submit final student evaluations |
+Aug 22 | Final results of Google Summer of Code 2018 announced |
+Oct | Mentor Summit at Google |
+
+<br />
+
+---
+<br />
+
 <a id="calendar"></a>
-## 3. My GSoC2018 Keynote Calendar
-[![My GSoC2018 Keynote Calendar](img/calendar.png)](https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing)
+## 4. My GSoC 2018 Keynote Calendar
+[![My GSoC 2018 Keynote Calendar](img/calendar.png)](https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing)
 
 <br />
 
 ---
 <br />
 <a id="experience"></a>
-## 4. Overall Experiance 
+## 5. Overall Experiance 
 Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and colaborative development were all forgien to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and force myself to quickly learn and adapt.
 
 <br />
@@ -160,7 +193,7 @@ Prior to my participation in Google Summer of Code 2018, I had no experience wit
 <br />
 
 <a id="final"></a>
-## 5. Final Thoughts
+## 6. Final Thoughts
 I am not much of a write, but I will try to make this as elequent as possible. In full disclosure, knowing this program is such an enormouse opportunity for me as a new developers, I'm certain I placed an overwhelming pressure upon myself to acheive. I've always considered myself a below average programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in know-how, I more make up for in determination.  It was stressful, chalLenging, and rewarding for sure.  We all have goals and dreams and my participation in Google Summer of Code 2018 gets me one step closer to realizing that dream.
 
 >Many have made great sacrifices in order for me to have the oppotunities I have today. There is no better way to repay those sactifices, than to acheive when those opportunities are presented, making things better for those generations who follow behind me.
