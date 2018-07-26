@@ -20,7 +20,7 @@ OpenCensus is single distribution of libraries that automatically collects trace
 ### 2. [Develope OpenCensus Zpages UI](#zpages)
  * 1.1 [The Commits](#zpages-commits)
  
-### 3. [GSoC2018 Keynote Calendar](#calendar)
+### 3. [My GSoC2018 Keynote Calendar](#calendar)
  
 ### 4. [Overall Experience](#experience)
 
@@ -143,8 +143,8 @@ Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this
 <br />
 
 <a id="calendar"></a>
-## 3. GSoC2018 Keynote Calendar
-
+## 3. My GSoC2018 Keynote Calendar
+[![My GSoC2018 Keynote Calendar](img/calendar.png)](https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing)
 
 
 
