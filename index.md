@@ -4,7 +4,7 @@
 
 <br />
 
-## OpenCensus.io Migration: HUGO Platform Theme (w/Markdown) + ZPages UI Development
+## OpenCensus.io Migration: Hugo Platform Theme (w/Markdown) + ZPages UI Development
 ### Read the complete GSoC 2018 Proposal - [Here](https://storage.googleapis.com/summerofcode-prod.appspot.com/gsoc/core_project/doc/5184261116657664_1521817377_Proposal_-_OpenCensus.pdf?Expires=1532667013&GoogleAccessId=summerofcode-prod%40appspot.gserviceaccount.com&Signature=7p44Nod2YW8zKeVUVevN1U9QTz5BcF9rzxU%2FKGJEVa%2F6cgJGQhiqe6UhnUIH8K3RiPeNjuWbympVSrGVRdZVK4BhEYRZW3tqpmjzX1%2BkKRiJW54JoOVeW%2B88u4j3xXB6%2B3wsrQV84zkIor4S3yZ2Xcp36lONGqldruMpTkul6%2F5FCyVP6H4o4bpIfGC%2B%2B5z0ccE3X4jpkyDFVaRJ5N8QDs5B1TF9J%2BuR%2FkrOCCTMq6a8%2BT6gBIyrmpONBd8E7OEbOEbP78N5%2BG1QqW1KkvVCoqGrllLdwLNFb%2BjxCpggXyBUhWmEqK7ON3HYK29JP2kxB%2FvuvpJiREE5tQS67LtPfQ%3D%3D) 
 <br />
 
@@ -26,7 +26,7 @@ OpenCensus is single distribution of libraries that automatically collects trace
  * [1.1 Challenges in Migration](#migrate-challenges)
  * [1.2 Website Migration Commits List by Date](#migrate-commits)
 
-### 2. [Develope OpenCensus Zpages UI](#zpages)
+### 2. [Develop OpenCensus Zpages UI](#zpages)
  * [1.1 Challenges in Zpages UI](#zpages-challenges)
  * [1.2 Zpage UI Commits List by Date](#zpages-commits)
  
@@ -86,14 +86,14 @@ Jul 19, 2018    | [Included svg images for Stackdriver, Zipkin, Jaeger and Prome
 Jul 19, 2018    | [All partner logos have been replaced with high quality images (#183)](https://github.com/census-instrumentation/opencensus-website/commit/dfa74dcdf237d31f9a31ab3ee01e48601072e42c) |
 
 
-### Centralized Migration Commits | authored by Adam Garza found [Here.](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
+### Centralized Migration Commits | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
 <br />
 
 ---
 <br />
 
 <a id="zpages"></a>
-## 2. Develope OpenCensus Zpages UI
+## 2. Develop OpenCensus Zpages UI
 
 ### What are Zpages?
 In OpenCensus, zpages implements a collection of HTML pages that display RPC stats and trace data. My task was to standardize the look and feel of the multiple zpages.
@@ -108,7 +108,7 @@ To acheive the base UI, I began work on the most complete set of Zpages built in
 
 <a id="zpages-challenges"></a>
 ### Chalenges in Zpages
-Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor has a unique programming style.
+Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct hand-writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributors programming method is different. 
 
 Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS, and use a Gradle build for resource availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). Although, I 
 
@@ -266,7 +266,8 @@ Prior to my participation in Google Summer of Code 2018, I had no experience wit
 
 <a id="final"></a>
 ## 6. Final Thoughts
-I am not much of a write, but I will try to make this as elequent as possible. In full disclosure, knowing this program is such an enormouse opportunity for me as a new developers, I'm certain I placed an overwhelming pressure upon myself to acheive. I've always considered myself a below average programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in know-how, I more make up for in determination.  It was stressful, chalLenging, and rewarding for sure.  We all have goals and dreams and my participation in Google Summer of Code 2018 gets me one step closer to realizing that dream.
+I'm not much of a writer, but I will try to make this as elequent as possible. Knowing this program is an enormous opportunity as a very green developer, I'm certain I placed an overwhelming amount of pressure upon myself to acheive. In my mind, I have always been a mediocre programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in "know how", I more than make up for in determination. These 12 weeks have been stressful and chalLenging, but rewarding for sure.
+We all have goals in life, and my participation in Google Summer of Code 2018 gets me one step closer to realizing mine.
 
 >Many have made great sacrifices in order for me to have the oppotunities I have today. There is no better way to repay those sactifices, than to acheive when those opportunities are presented, making things better for those generations who follow behind me.
 
