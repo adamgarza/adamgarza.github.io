@@ -146,8 +146,6 @@ Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this
 ## 3. My GSoC2018 Keynote Calendar
 [![My GSoC2018 Keynote Calendar](img/calendar.png)](https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing)
 
-
-
 <br />
 
 ---
@@ -156,6 +154,9 @@ Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this
 ## 4. Overall Experiance 
 Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and colaborative development were all forgien to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and force myself to quickly learn and adapt.
 
+<br />
+
+---
 <br />
 
 <a id="final"></a>
