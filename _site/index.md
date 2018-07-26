@@ -179,6 +179,66 @@ Oct | Mentor Summit at Google |
 ## 4. My GSoC 2018 Keynote Calendar
 [![My GSoC 2018 Keynote Calendar](img/calendar.png)](https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing)
 
+1. Week 1 (May 14 - May 18)
+* Iteration 1 of migration
+* Convert about.html to about.md
+* Migrate the page seemlessly 
+
+2. Week 2 (May 21 - May 25)
+* 
+* 
+* 
+
+3. Week 3 (May 28 - Jun 1)
+* 
+* 
+* 
+* 
+
+4. Week 4 (Jun 4 - Jun 8)
+* 
+* 
+* 
+* 
+
+5. Week 5 (Jun 11 - Jun 15)
+* 
+* 
+* 
+
+6. Week 6 (Jun 18 - Jun 22)
+* 
+* 
+* 
+
+7. Week 7 (Jun 25 - Jun 29)
+* 
+* 
+* 
+
+8. Week 8 (Jul 2 - Jul 6)
+* 
+* 
+* 
+
+9. Week 9 (Jul 9 - Jul 13)
+* 
+* 
+* 
+
+10. Week 10 (Jul 16 - Jul 20)
+* 
+* 
+* 
+
+11. Week 11 (Jul 23 - Jul 27)
+* 
+* 
+
+12. Week 12 (Jul 30 - Aug 3)
+* 
+* 
+
 <br />
 
 ---
