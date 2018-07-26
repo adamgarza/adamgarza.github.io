@@ -19,7 +19,7 @@
 {"name":"Adam Garza GSoC2018","description":"Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI","@type":"WebSite","url":"http://localhost:4000/","headline":"Adam Garza GSoC2018","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=18be479aa46ca24d1ca30b6c8724db55f8468d94">
+    <link rel="stylesheet" href="/assets/css/style.css?v=26a41434bf80bafd243de57e091299ec689b6f65">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -53,23 +53,33 @@
 <p><br /></p>
 
 <h2 id="migrate-opencensusio-into-hugo-markdown-theme--develop-opencensus-zpages-ui">Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI</h2>
-
-<hr />
-<h3 id="what-is-opencensus">What is OpenCensus</h3>
-<p>OpenCensus is single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and sends them to any analysis tool.</p>
-
-<hr />
+<h3 id="read-the-complete-gsoc-2018-proposal---here">Read the complete GSoC 2018 Proposal - <a href="https://storage.googleapis.com/summerofcode-prod.appspot.com/gsoc/core_project/doc/5184261116657664_1521817377_Proposal_-_OpenCensus.pdf?Expires=1532667013&amp;GoogleAccessId=summerofcode-prod%40appspot.gserviceaccount.com&amp;Signature=7p44Nod2YW8zKeVUVevN1U9QTz5BcF9rzxU%2FKGJEVa%2F6cgJGQhiqe6UhnUIH8K3RiPeNjuWbympVSrGVRdZVK4BhEYRZW3tqpmjzX1%2BkKRiJW54JoOVeW%2B88u4j3xXB6%2B3wsrQV84zkIor4S3yZ2Xcp36lONGqldruMpTkul6%2F5FCyVP6H4o4bpIfGC%2B%2B5z0ccE3X4jpkyDFVaRJ5N8QDs5B1TF9J%2BuR%2FkrOCCTMq6a8%2BT6gBIyrmpONBd8E7OEbOEbP78N5%2BG1QqW1KkvVCoqGrllLdwLNFb%2BjxCpggXyBUhWmEqK7ON3HYK29JP2kxB%2FvuvpJiREE5tQS67LtPfQ%3D%3D">Here</a></h3>
 <p><br /></p>
+
+<hr />
+
+<p><br /></p>
+<h3 id="what-is-opencensus">What is OpenCensus?</h3>
+<p>OpenCensus is single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and sends them to any analysis tool. Sounds complicated… right!</p>
+
+<p><br /></p>
+
+<hr />
+
+<p><br /></p>
+
 <h2 id="table-of-content">Table of Content</h2>
 
 <h3 id="1-migrate-opencensusio-into-a-hugo-markdown-theme">1. <a href="#migrate">Migrate OpenCensus.io into a HUGO markdown theme</a></h3>
 <ul>
-  <li>1.1 <a href="#migrate-commits">The Commits</a></li>
+  <li><a href="#migrate-challenges">1.1 Challenges in Migration</a></li>
+  <li><a href="#migrate-commits">1.2 Website Migration Commits List by Date</a></li>
 </ul>
 
 <h3 id="2-develope-opencensus-zpages-ui">2. <a href="#zpages">Develope OpenCensus Zpages UI</a></h3>
 <ul>
-  <li>1.1 <a href="#zpages-commits">The Commits</a></li>
+  <li><a href="#zpages-challenges">1.1 Challenges in Zpages UI</a></li>
+  <li><a href="#zpages-commits">1.2 Zpage UI Commits List by Date</a></li>
 </ul>
 
 <h3 id="3-google-summer-of-code-2018-timeline">3. <a href="#timeline">Google Summer of Code 2018 Timeline</a></h3>
@@ -89,10 +99,11 @@
 <h2 id="1-migrate-opencensusio-into-a-hugo-markdown-theme-1">1. Migrate OpenCensus.io into a HUGO markdown theme</h2>
 <p>The OpenCensus Development Contributors were in need of a fast and easy method to add &amp; update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.</p>
 
-<p>Section 1 of my Google Summer of Code proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.</p>
+<p>Part I, of my Google Summer of Code Proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.</p>
 
 <p><br /></p>
 
+<p><a id="migrate-challenges"></a></p>
 <h3 id="challenges-in-migration">Challenges in Migration</h3>
 <p>At Web Development I’m a wiz, so I thought “Hey, I can do this easily.” In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.</p>
 
@@ -222,6 +233,7 @@
 
 <p><br /></p>
 
+<p><a id="zpages-challenges"></a></p>
 <h3 id="chalenges-in-zpages">Chalenges in Zpages</h3>
 <p>Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor has a unique programming style.</p>
 
@@ -256,7 +268,7 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 <p><br /></p>
 
 <p><a id="zpages-commits"></a></p>
-<h3 id="zpage-commits">Zpage Commits</h3>
+<h3 id="zpage-ui-commits-list-by-date">Zpage UI Commits List by Date</h3>
 
 <table>
   <thead>

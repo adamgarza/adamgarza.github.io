@@ -5,20 +5,30 @@
 <br />
 
 ## Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI
-
----
-### What is OpenCensus
-OpenCensus is single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and sends them to any analysis tool.
-
----
+### Read the complete GSoC 2018 Proposal - [Here](https://storage.googleapis.com/summerofcode-prod.appspot.com/gsoc/core_project/doc/5184261116657664_1521817377_Proposal_-_OpenCensus.pdf?Expires=1532667013&GoogleAccessId=summerofcode-prod%40appspot.gserviceaccount.com&Signature=7p44Nod2YW8zKeVUVevN1U9QTz5BcF9rzxU%2FKGJEVa%2F6cgJGQhiqe6UhnUIH8K3RiPeNjuWbympVSrGVRdZVK4BhEYRZW3tqpmjzX1%2BkKRiJW54JoOVeW%2B88u4j3xXB6%2B3wsrQV84zkIor4S3yZ2Xcp36lONGqldruMpTkul6%2F5FCyVP6H4o4bpIfGC%2B%2B5z0ccE3X4jpkyDFVaRJ5N8QDs5B1TF9J%2BuR%2FkrOCCTMq6a8%2BT6gBIyrmpONBd8E7OEbOEbP78N5%2BG1QqW1KkvVCoqGrllLdwLNFb%2BjxCpggXyBUhWmEqK7ON3HYK29JP2kxB%2FvuvpJiREE5tQS67LtPfQ%3D%3D) 
 <br />
+
+---
+ 
+<br />
+### What is OpenCensus?
+OpenCensus is single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and sends them to any analysis tool. Sounds complicated... right!
+
+<br />
+
+---
+
+<br />
+
 ## Table of Content
 
 ### 1. [Migrate OpenCensus.io into a HUGO markdown theme](#migrate)
- * 1.1 [The Commits](#migrate-commits)
+ * [1.1 Challenges in Migration](#migrate-challenges)
+ * [1.2 Website Migration Commits List by Date](#migrate-commits)
 
 ### 2. [Develope OpenCensus Zpages UI](#zpages)
- * 1.1 [The Commits](#zpages-commits)
+ * [1.1 Challenges in Zpages UI](#zpages-challenges)
+ * [1.2 Zpage UI Commits List by Date](#zpages-commits)
  
 ### 3. [Google Summer of Code 2018 Timeline](#timeline) 
  
@@ -37,10 +47,11 @@ OpenCensus is single distribution of libraries that automatically collects trace
 ## 1. Migrate OpenCensus.io into a HUGO markdown theme
 The OpenCensus Development Contributors were in need of a fast and easy method to add & update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.
 
-Section 1 of my Google Summer of Code proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.
+Part I, of my Google Summer of Code Proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.
 
 <br />
 
+<a id="migrate-challenges"></a>
 ### Challenges in Migration
 At Web Development I'm a wiz, so I thought "Hey, I can do this easily." In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.  
 
@@ -95,6 +106,7 @@ To acheive the base UI, I began work on the most complete set of Zpages built in
 
 <br />
 
+<a id="zpages-challenges"></a>
 ### Chalenges in Zpages
 Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor has a unique programming style.
 
@@ -132,7 +144,7 @@ private static final String STYLE;
 <br />
 
 <a id="zpages-commits"></a>
-### Zpage Commits
+### Zpage UI Commits List by Date
 
 Date | Commit Description  |
 ----------------| --------------------|
