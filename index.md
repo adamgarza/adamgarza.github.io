@@ -143,6 +143,14 @@ private static final String STYLE;
   ```
 <br />
 
+After a week of unsuccessful attempts at linking the Gradle build for external resources such as this CSS, JSON, JavaScript, etc., my Opencensus-java mentor Yang and I resolved on a work-around to the dilema.
+
+>We didn't find a way to apply the css file to Java sources in Gradle build, so we instead put the styles in a [plain Java string](https://github.com/census-instrumentation/opencensus-java/blob/master/contrib/zpages/src/main/java/io/opencensus/contrib/zpages/Style.java). Other languages can simply copy and paste the styles to a css file and use it for the zpages.
+
+- Yang Song 
+  
+<br />
+
 <a id="zpages-commits"></a>
 ### Zpage UI Commits List by Date
 
@@ -150,6 +158,7 @@ Date | Commit Description  |
 ----------------| --------------------|
 Jun 10, 2018    | [Rpcz, Statsz, Tracez, and Traceconfigz page styling modifications (#1295)](https://github.com/census-instrumentation/opencensus-java/commit/2d1e5c8486bbb5f1101a057d7e044dc60f80a50d)
 Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this resource (#1341)](https://github.com/census-instrumentation/opencensus-java/commit/53fc5f0e49eab37fc814f38b11352c9b19e83fe1)
+Jul 31, 2018    | [Top-level style class added for Zpages use + Final commit for GSoC... (#1351)](https://github.com/census-instrumentation/opencensus-java/pull/1351)
 
 <br />
 

@@ -19,7 +19,7 @@
 {"name":"Adam Garza GSoC2018","description":"Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI","@type":"WebSite","url":"http://localhost:4000/","headline":"Adam Garza GSoC2018","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=80a8582da2950974626ca5d72e0269651dc064f9">
+    <link rel="stylesheet" href="/assets/css/style.css?v=e670cc753c102e257a50fd8f6d6082471e958085">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -76,7 +76,7 @@
   <li><a href="#migrate-commits">1.2 Website Migration Commits List by Date</a></li>
 </ul>
 
-<h3 id="2-develope-opencensus-zpages-ui">2. <a href="#zpages">Develope OpenCensus Zpages UI</a></h3>
+<h3 id="2-develop-opencensus-zpages-ui">2. <a href="#zpages">Develop OpenCensus Zpages UI</a></h3>
 <ul>
   <li><a href="#zpages-challenges">1.1 Challenges in Zpages UI</a></li>
   <li><a href="#zpages-commits">1.2 Zpage UI Commits List by Date</a></li>
@@ -97,15 +97,15 @@
 
 <p><a id="migrate"></a></p>
 <h2 id="1-migrate-opencensusio-into-a-hugo-markdown-theme-1">1. Migrate OpenCensus.io into a HUGO markdown theme</h2>
-<p>The OpenCensus Development Contributors were in need of a fast and easy method to add &amp; update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.</p>
+<p>The OpenCensus Development Team and Contributors were in need of a fast and easy method to add &amp; update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.</p>
 
-<p>Part I, of my Google Summer of Code Proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.</p>
+<p>Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC, I have never heard of markdown, much less know anything about the satic site generator platform of HUGO. I took this task as a programming challenge and dedicated myself to quickly learn these new platforms and concepts within a short time period. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO static site generator platform. The two topics were understandable. Straight out of the box, Hugo and markdown are simple to grasp and work with. The difficulty lies in the conversion of an existing HTML built site into a HUGO platform theme.</p>
 
 <p><br /></p>
 
 <p><a id="migrate-challenges"></a></p>
 <h3 id="challenges-in-migration">Challenges in Migration</h3>
-<p>At Web Development I’m a wiz, so I thought “Hey, I can do this easily.” In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.</p>
+<p>As I mention earlier, the concept and implementation of the HUGO platform and markdown use is easy to understand. At Web Development I’m a wizard, so I thought “Hey, I can do this easily.” In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability &amp; scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.</p>
 
 <p><br /></p>
 
@@ -218,7 +218,7 @@
 <p><br /></p>
 
 <p><a id="zpages"></a></p>
-<h2 id="2-develope-opencensus-zpages-ui-1">2. Develope OpenCensus Zpages UI</h2>
+<h2 id="2-develop-opencensus-zpages-ui-1">2. Develop OpenCensus Zpages UI</h2>
 
 <h3 id="what-are-zpages">What are Zpages?</h3>
 <p>In OpenCensus, zpages implements a collection of HTML pages that display RPC stats and trace data. My task was to standardize the look and feel of the multiple zpages.</p>
@@ -267,6 +267,18 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 </code></pre></div></div>
 <p><br /></p>
 
+<p>After a week of unsuccessful attempts at linking the Gradle build for external resources such as this CSS, JSON, JavaScript, etc., my Opencensus-java mentor Yang and I resolved on a work-around to the dilema.</p>
+
+<blockquote>
+  <p>We didn’t find a way to apply the css file to Java sources in Gradle build, so we instead put the styles in a <a href="https://github.com/census-instrumentation/opencensus-java/blob/master/contrib/zpages/src/main/java/io/opencensus/contrib/zpages/Style.java">plain Java string</a>. Other languages can simply copy and paste the styles to a css file and use it for the zpages.</p>
+</blockquote>
+
+<ul>
+  <li>Yang Song</li>
+</ul>
+
+<p><br /></p>
+
 <p><a id="zpages-commits"></a></p>
 <h3 id="zpage-ui-commits-list-by-date">Zpage UI Commits List by Date</h3>
 
@@ -285,6 +297,10 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
     <tr>
       <td>Jul 24, 2018</td>
       <td><a href="https://github.com/census-instrumentation/opencensus-java/commit/53fc5f0e49eab37fc814f38b11352c9b19e83fe1">Zpages external CSS added and gradle modified to include this resource (#1341)</a></td>
+    </tr>
+    <tr>
+      <td>Jul 31, 2018</td>
+      <td><a href="https://github.com/census-instrumentation/opencensus-java/pull/1351">Top-level style class added for Zpages use + Final commit for GSoC… (#1351)</a></td>
     </tr>
   </tbody>
 </table>
@@ -499,7 +515,8 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 
 <p><a id="final"></a></p>
 <h2 id="6-final-thoughts-1">6. Final Thoughts</h2>
-<p>I am not much of a write, but I will try to make this as elequent as possible. In full disclosure, knowing this program is such an enormouse opportunity for me as a new developers, I’m certain I placed an overwhelming pressure upon myself to acheive. I’ve always considered myself a below average programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in know-how, I more make up for in determination.  It was stressful, chalLenging, and rewarding for sure.  We all have goals and dreams and my participation in Google Summer of Code 2018 gets me one step closer to realizing that dream.</p>
+<p>I’m not much of a writer, but I will try to make this as elequent as possible. Knowing this program is an enormous opportunity as a very green developer, I’m certain I placed an overwhelming amount of pressure upon myself to acheive. In my mind, I have always been a mediocre programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in “know how”, I more than make up for in determination. These 12 weeks have been stressful and chalLenging, but rewarding for sure.
+We all have goals in life, and my participation in Google Summer of Code 2018 gets me one step closer to realizing mine.</p>
 
 <blockquote>
   <p>Many have made great sacrifices in order for me to have the oppotunities I have today. There is no better way to repay those sactifices, than to acheive when those opportunities are presented, making things better for those generations who follow behind me.</p>

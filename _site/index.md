@@ -26,7 +26,7 @@ OpenCensus is single distribution of libraries that automatically collects trace
  * [1.1 Challenges in Migration](#migrate-challenges)
  * [1.2 Website Migration Commits List by Date](#migrate-commits)
 
-### 2. [Develope OpenCensus Zpages UI](#zpages)
+### 2. [Develop OpenCensus Zpages UI](#zpages)
  * [1.1 Challenges in Zpages UI](#zpages-challenges)
  * [1.2 Zpage UI Commits List by Date](#zpages-commits)
  
@@ -45,15 +45,15 @@ OpenCensus is single distribution of libraries that automatically collects trace
 
 <a id="migrate"></a>
 ## 1. Migrate OpenCensus.io into a HUGO markdown theme
-The OpenCensus Development Contributors were in need of a fast and easy method to add & update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.
+The OpenCensus Development Team and Contributors were in need of a fast and easy method to add & update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.
 
-Part I, of my Google Summer of Code Proposal was to convert the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC 2018, I have never worked in markdown, much less know anything about the satic site generator platform of HUGO. I took this on as a programming challenge and forced myself to quickly learn these new platforms and concepts on the fly. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO platform. The two topics were understandable, the difficulty lied in the conversion of existing HTML to HUGO theme.
+Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC, I have never heard of markdown, much less know anything about the satic site generator platform of HUGO. I took this task as a programming challenge and dedicated myself to quickly learn these new platforms and concepts within a short time period. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO static site generator platform. The two topics were understandable. Straight out of the box, Hugo and markdown are simple to grasp and work with. The difficulty lies in the conversion of an existing HTML built site into a HUGO platform theme.
 
 <br />
 
 <a id="migrate-challenges"></a>
 ### Challenges in Migration
-At Web Development I'm a wiz, so I thought "Hey, I can do this easily." In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.  
+As I mention earlier, the concept and implementation of the HUGO platform and markdown use is easy to understand. At Web Development I'm a wizard, so I thought "Hey, I can do this easily." In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability & scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.  
 
 <br />
 
@@ -93,7 +93,7 @@ Jul 19, 2018    | [All partner logos have been replaced with high quality images
 <br />
 
 <a id="zpages"></a>
-## 2. Develope OpenCensus Zpages UI
+## 2. Develop OpenCensus Zpages UI
 
 ### What are Zpages?
 In OpenCensus, zpages implements a collection of HTML pages that display RPC stats and trace data. My task was to standardize the look and feel of the multiple zpages.
@@ -143,6 +143,14 @@ private static final String STYLE;
   ```
 <br />
 
+After a week of unsuccessful attempts at linking the Gradle build for external resources such as this CSS, JSON, JavaScript, etc., my Opencensus-java mentor Yang and I resolved on a work-around to the dilema.
+
+>We didn't find a way to apply the css file to Java sources in Gradle build, so we instead put the styles in a [plain Java string](https://github.com/census-instrumentation/opencensus-java/blob/master/contrib/zpages/src/main/java/io/opencensus/contrib/zpages/Style.java). Other languages can simply copy and paste the styles to a css file and use it for the zpages.
+
+- Yang Song 
+  
+<br />
+
 <a id="zpages-commits"></a>
 ### Zpage UI Commits List by Date
 
@@ -150,6 +158,7 @@ Date | Commit Description  |
 ----------------| --------------------|
 Jun 10, 2018    | [Rpcz, Statsz, Tracez, and Traceconfigz page styling modifications (#1295)](https://github.com/census-instrumentation/opencensus-java/commit/2d1e5c8486bbb5f1101a057d7e044dc60f80a50d)
 Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this resource (#1341)](https://github.com/census-instrumentation/opencensus-java/commit/53fc5f0e49eab37fc814f38b11352c9b19e83fe1)
+Jul 31, 2018    | [Top-level style class added for Zpages use + Final commit for GSoC... (#1351)](https://github.com/census-instrumentation/opencensus-java/pull/1351)
 
 <br />
 
@@ -266,7 +275,8 @@ Prior to my participation in Google Summer of Code 2018, I had no experience wit
 
 <a id="final"></a>
 ## 6. Final Thoughts
-I am not much of a write, but I will try to make this as elequent as possible. In full disclosure, knowing this program is such an enormouse opportunity for me as a new developers, I'm certain I placed an overwhelming pressure upon myself to acheive. I've always considered myself a below average programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in know-how, I more make up for in determination.  It was stressful, chalLenging, and rewarding for sure.  We all have goals and dreams and my participation in Google Summer of Code 2018 gets me one step closer to realizing that dream.
+I'm not much of a writer, but I will try to make this as elequent as possible. Knowing this program is an enormous opportunity as a very green developer, I'm certain I placed an overwhelming amount of pressure upon myself to acheive. In my mind, I have always been a mediocre programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in "know how", I more than make up for in determination. These 12 weeks have been stressful and chalLenging, but rewarding for sure.
+We all have goals in life, and my participation in Google Summer of Code 2018 gets me one step closer to realizing mine.
 
 >Many have made great sacrifices in order for me to have the oppotunities I have today. There is no better way to repay those sactifices, than to acheive when those opportunities are presented, making things better for those generations who follow behind me.
 
