@@ -24,11 +24,13 @@ OpenCensus is single distribution of libraries that automatically collects trace
 
 ### 1. [Migrate OpenCensus.io into a HUGO markdown theme](#migrate)
  * [1.1 Challenges in Migration](#migrate-challenges)
- * [1.2 Website Migration Commits List by Date](#migrate-commits)
+ * [1.2 Website Migration Commits List](#migrate-commits)
+ * [1.3 Migration Commits Authored by Adam Garza](#Mcommits)
 
 ### 2. [Develop OpenCensus Zpages UI](#zpages)
  * [1.1 Challenges in Zpages UI](#zpages-challenges)
- * [1.2 Zpage UI Commits List by Date](#zpages-commits)
+ * [1.2 Zpages UI Commits List](#zpages-commits)
+ * [1.3 Zpages Commits Authored by Adam Garza](#Zcommits)
  
 ### 3. [Google Summer of Code 2018 Timeline](#timeline) 
  
@@ -45,15 +47,110 @@ OpenCensus is single distribution of libraries that automatically collects trace
 
 <a id="migrate"></a>
 ## 1. Migrate OpenCensus.io into a HUGO markdown theme
-The OpenCensus Development Team and Contributors were in need of a fast and easy method to add & update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.
+The OpenCensus Development Team and Contributors were in need of a fast and easy method to add & update their language specific sections of documentation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the Open Source contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.
 
-Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC, I have never heard of markdown, much less know anything about the satic site generator platform of HUGO. I took this task as a programming challenge and dedicated myself to quickly learn these new platforms and concepts within a short time period. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO static site generator platform. The two topics were understandable. Straight out of the box, Hugo and markdown are simple to grasp and work with. The difficulty lies in the conversion of an existing HTML built site into a HUGO platform theme.
+Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC, I have never heard of markdown, much less know anything about the static site generator platform of HUGO. I took this task as a developing challenge and dedicated myself to quickly learn these new platforms and concepts within a short time period. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO static site generator platform. The two topics were understandable. Straight out of the box, Hugo and markdown are simple to grasp, work with and implement. The difficulties lay in the conversion of an existing HTML built site into a HUGO platform theme.
 
 <br />
 
 <a id="migrate-challenges"></a>
 ### Challenges in Migration
-As I mention earlier, the concept and implementation of the HUGO platform and markdown use is easy to understand. At Web Development I'm a wizard, so I thought "Hey, I can do this easily." In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability & scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.  
+ At Web Development I'm a wizard, so I thought "Hey, I can do this easily." As I mention earlier, the concept and implementation of the HUGO platform and markdown is easy to understand. The truth is, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability & scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to render the site as close to the original site (HTML, JScript, and CSS).
+ 
+ In order to build the HUGO directory structure, I divided the original site into 2 parts.
+ * Theme files & directories (themes directory)
+ * Static content files & directories (content, layouts, and static directory)
+ 
+ The `theme` directory will house everything related to the look and feel (template) of the site. The `content, layouts & static` directories will house everything related to the content of the site.
+
+```bash
+├── .
+├── AUTHORS
+├── config.toml
+├── content
+│   ├── about.md
+│   ├── blog.md
+│   ├── community.md
+│   ├── cpp.md
+│   ├── docs.md
+│   ├── erlang.md
+│   ├── explorer.md
+│   ├── faq.md
+│   ├── glossary.md
+│   ├── go.md
+│   ├── gogrpc.md
+│   ├── index.md
+│   ├── java.md
+│   ├── overview.md
+│   ├── php.md
+│   ├── python.md
+│   ├── roadmap.md
+│   ├── ruby.md
+│   ├── stats.ms
+│   ├── tags.md
+│   ├── traces.md
+│   ├── troubleshooting.md
+│   └── zpages.md
+├── firebase.JSON
+├── layouts
+│   └── partials
+│       ├── contribute.html
+│       ├── footer.html
+│       ├── header.html
+│       ├── index_nav.html
+│       ├── nav.html
+│       ├── partners.html
+│       ├── statsExporter.html
+│       └── traceExporter.html
+├── LICENSE
+├── README.md
+├── static
+│   ├── 404.html
+│   ├── api
+│   │   ├── php
+│   │   └── python
+│   ├── css
+│   │   ├── responsive.css
+│   │   └── style.css
+│   ├── favicon
+│   ├── favicon.ico
+│   ├── img
+│   ├── index.html
+│   ├── js
+│   └── sitemap.xml
+└── themes
+    └── census
+        ├── archetypes
+        │   └── default.md 
+        ├── CHANGELOG.md
+        ├── layouts
+        │   ├── _default
+        │   │   └── single.html
+        │   └── shortcodes
+        │       ├── go.html
+        │       ├── java.html
+        │       ├── sc_btn.html
+        │       ├── sc_center.html
+        │       ├── sc_gloss1.html
+        │       ├── sc_indent.html
+        │       ├── sc_indent1.html
+        │       ├── sc_indent2.html
+        │       ├── sc_indent3.html
+        │       ├── sc_indent4.html
+        │       ├── sc_indent5.html
+        │       ├── sc_indent6.html
+        │       ├── sc_indent7.html
+        │       ├── sc_indent8.html
+        │       ├── sc_indent9.html
+        │       ├── sc_indent10.html
+        │       ├── sc_red.html
+        │       ├── sc_supportedExporters.html
+        │       ├── sc_supportedLanguages.html
+        │       └── snippets.html
+        ├── LICENSE.md
+        ├── README.md
+        └── theme.toml
+```
 
 <br />
 
@@ -85,7 +182,7 @@ Jul 16, 2018    | [Updated node.js stats as supported on languages table (#177)]
 Jul 19, 2018    | [Included svg images for Stackdriver, Zipkin, Jaeger and Prometheus logos (#181)](https://github.com/census-instrumentation/opencensus-website/commit/90feb88ad200230914748d78c2cea4375af3b31b) |
 Jul 19, 2018    | [All partner logos have been replaced with high quality images (#183)](https://github.com/census-instrumentation/opencensus-website/commit/dfa74dcdf237d31f9a31ab3ee01e48601072e42c) |
 
-
+<a id="Mcommits"></a>
 ### Centralized Migration Commits | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
 <br />
 
@@ -102,23 +199,30 @@ In OpenCensus, zpages implements a collection of HTML pages that display RPC sta
 3. Tracez
 4. Traceconfigz
 
-To acheive the base UI, I began work on the most complete set of Zpages built in Java. But, since OpenCensus will support multiple languages, I had to also create an external CSS of commonalities among the variaous zpages to be used across all languages. Basically, we need the zpages for all the supported languages to look and feel the same. To save myself from having to style each of the four zpages for every language supported, a single external CSS can acheive this, as well as, making changes in a single location very accommodating.
+To achieve the base UI, I began work on the most complete set of Zpages built in Java. But, since OpenCensus will support multiple languages, I had to also create an external CSS of commonalities among the various zpages to be used across all languages. Basically, we need the zpages for all the supported languages to look and feel the same. To save myself from having to style each of the four zpages for every language supported, a single external CSS can achieve this, as well as, making changes in a single location very accommodating.
 
 <br />
 
 <a id="zpages-challenges"></a>
-### Chalenges in Zpages
-Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct hand-writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributors programming method is different. 
+### Challenges in Zpages
+Some challenges I came across while working on the Zpages were the unique structures of the numerous tables used among the four Java Zpages.
 
-Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS, and use a Gradle build for resource availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). Although, I 
+* RpczZPageHandler
+* StatszZPageHandler
+* TracezZPageHandler
+* TraceConfigzZPageHandler
 
-Gradle build lines added:
+Just as everyone has a distinct hand-writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor's coding method is different. 
+
+Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS using Gradle to build the resource for availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). The problem my Java mentor and I came across was determining the relative path for access to the css resource built by Gradle.
+
+Gradle build (build.gradle) lines added:
 ```
 sourceSets.main.resources.srcDirs = [ "src/resources/" ]
 sourceSets.main.resources.includes = [ "**/*.css" ]
 ```
 
-Java rpcz handler lines added:
+Java rpcz handler lines added (hardcode direct path):
 ```java
 private static final String CSS_PATH =
         "/Users/username/Desktop/opencensus-java" +
@@ -143,12 +247,49 @@ private static final String STYLE;
   ```
 <br />
 
-After a week of unsuccessful attempts at linking the Gradle build for external resources such as this CSS, JSON, JavaScript, etc., my Opencensus-java mentor Yang and I resolved on a work-around to the dilema.
+After a week of unsuccessful attempts at linking the Gradle build for external resources such as this CSS, JSON, JavaScript, etc., my Java mentor Yang and I resolved on a work-around. We decided to create a top-level class that hold the CSS as a string (seen below). Since this style class is part of the containing classes package `package io.opencensus.contrib.zpages`, all the Zpage handlers have access to the resource.
 
->We didn't find a way to apply the css file to Java sources in Gradle build, so we instead put the styles in a [plain Java string](https://github.com/census-instrumentation/opencensus-java/blob/master/contrib/zpages/src/main/java/io/opencensus/contrib/zpages/Style.java). Other languages can simply copy and paste the styles to a css file and use it for the zpages.
+Style.java
+```java
+/* Style.java */
+package io.opencensus.contrib.zpages;
 
-- Yang Song 
-  
+final class Style {
+  private Style() {}
+
+  static String style =
+      "body{font-family: 'Roboto',sans-serif;"
+          + "font-size: 14px;background-color: #F2F4EC;}"
+          + "h1{color: #3D3D3D;text-align: center;margin-bottom: 20px;}"
+          + "p{padding: 0 0.5em;color: #3D3D3D;}"
+          + ...
+          + ...;
+}
+```
+This now allows the every Zpage handler access to the CSS resource.
+
+RpcZPagehandler
+```java
+/* RpcZPahehandler.java */
+  private static void emitStyles(PrintWriter out, Formatter formatter) {
+    out.write("<style>");
+    out.write(Style.style);
+    out.write("</style>");
+  }
+```
+Each handler now include the CSS resource in the `emitStyles()` method with the addition of `out.write(Style.style);`
+
+
+The Java access modifiers private and protected cannot be assigned to a class. Only to constructors, methods and fields inside classes. Classes can only have the default (package) and public access modifier assigned to them.
+
+Access Modifiers | private | default | protected | public
+---------------- | :-----: | :-----: | :-------: | :----:
+Inside Class | Y | Y | Y | Y
+Same Package Class | N | Y | Y | Y
+Same Package Sub-Class | N | Y | Y | Y
+Other Package Class | N | N | N | Y
+Other Package Sub-Class | N | N | Y | Y
+
 <br />
 
 <a id="zpages-commits"></a>
@@ -160,6 +301,8 @@ Jun 10, 2018    | [Rpcz, Statsz, Tracez, and Traceconfigz page styling modificat
 Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this resource (#1341)](https://github.com/census-instrumentation/opencensus-java/commit/53fc5f0e49eab37fc814f38b11352c9b19e83fe1)
 Jul 31, 2018    | [Top-level style class added for Zpages use + Final commit for GSoC... (#1351)](https://github.com/census-instrumentation/opencensus-java/pull/1351)
 
+<a id="Zcommits"></a>
+### Centralized Zpages Commits | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza)
 <br />
 
 ---
@@ -203,7 +346,7 @@ Oct | Mentor Summit at Google |
 1. Week 1 (May 14 - May 18)
 * Iteration 1 of migration
 * Convert about.html to about.md
-* Migrate the page seemlessly 
+* Migrate the page seamlessly 
 
 2. Week 2 (May 21 - May 25)
 * 
@@ -265,8 +408,19 @@ Oct | Mentor Summit at Google |
 ---
 <br />
 <a id="experience"></a>
-## 5. Overall Experiance 
-Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and colaborative development were all forgien to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and force myself to quickly learn and adapt.
+## 5. Overall Experience 
+Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and collaborative development were all foreign to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and commit myself to learn and adapt.
+
+The first few weeks of communicating and interacting with the managers, developers and collaborators of OpenCensus was intimidating for me, to say the least. But as I continued moving forward in the program - within my contact with everyone at OpenCensus, I never felt uncomfortable asking questions or explanations.
+
+My overall experience participating in the Google Summer of Code 2018 on OpenCensus was one of learning. GSoC has allowed me to strengthen the following skills:
+* Communication - specifically the ability to write and speak effectively and professionally
+* Collaboration
+* Time Management
+* Adaptability
+* Critical Thinking
+* Research and Analysis
+* Initiative
 
 <br />
 
@@ -275,9 +429,12 @@ Prior to my participation in Google Summer of Code 2018, I had no experience wit
 
 <a id="final"></a>
 ## 6. Final Thoughts
-I'm not much of a writer, but I will try to make this as elequent as possible. Knowing this program is an enormous opportunity as a very green developer, I'm certain I placed an overwhelming amount of pressure upon myself to acheive. In my mind, I have always been a mediocre programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in "know how", I more than make up for in determination. These 12 weeks have been stressful and chalLenging, but rewarding for sure.
-We all have goals in life, and my participation in Google Summer of Code 2018 gets me one step closer to realizing mine.
+I'm not much of a writer, but I will try to make this as eloquent as possible. Knowing this program is an enormous opportunity for me as a green developer, I placed an overwhelming amount of pressure upon myself to achieve. Although, what I lack in "know how", I more than make up for in determination. These 12 weeks have been stressful and challenging, yet satisfying and rewarding with the sense of accomplishment for sure.
 
->Many have made great sacrifices in order for me to have the oppotunities I have today. There is no better way to repay those sactifices, than to acheive when those opportunities are presented, making things better for those generations who follow behind me.
+I would like to thank my mentor Gopi Palaniappan for this opportunity. From the very start you have been my #1 supporter, having all the confidence in me to perform well. Many times we do not know how much of an impact we have on those around us. I will like to let you know, that you have made an enormous impact and influence on what I do, and where I go from here. Thank you for all the support.
+
+I will also take this moment to thank Pritam Shah, for the help me plan and execute a comprehensive work plan. Jaana Burcu Dogan, thank you for helping me manage the issues with the site. Yang Song, thank you for the guidence, when I came across an issue that I could not resolve solo.
+
+>The generations of family members that have come before me have made great sacrifices in order for me to have the oppotunities I have right now. There is no better way to repay their sactifices, than to achieve when those opportunities are presented. My hope is that I somehow make things better for those who will follow.
 
 \- Adam Garza

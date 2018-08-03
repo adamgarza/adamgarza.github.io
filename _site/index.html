@@ -19,7 +19,7 @@
 {"name":"Adam Garza GSoC2018","description":"Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI","@type":"WebSite","url":"http://localhost:4000/","headline":"Adam Garza GSoC2018","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=e8545bd6f35edbea1f7742c2a2a40618691619be">
+    <link rel="stylesheet" href="/assets/css/style.css?v=b324ce24bc3ff2715e2e57a728e39947304351ee">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -73,13 +73,15 @@
 <h3 id="1-migrate-opencensusio-into-a-hugo-markdown-theme">1. <a href="#migrate">Migrate OpenCensus.io into a HUGO markdown theme</a></h3>
 <ul>
   <li><a href="#migrate-challenges">1.1 Challenges in Migration</a></li>
-  <li><a href="#migrate-commits">1.2 Website Migration Commits List by Date</a></li>
+  <li><a href="#migrate-commits">1.2 Website Migration Commits List</a></li>
+  <li><a href="#Mcommits">1.3 Migration Commits Authored by Adam Garza</a></li>
 </ul>
 
 <h3 id="2-develop-opencensus-zpages-ui">2. <a href="#zpages">Develop OpenCensus Zpages UI</a></h3>
 <ul>
   <li><a href="#zpages-challenges">1.1 Challenges in Zpages UI</a></li>
-  <li><a href="#zpages-commits">1.2 Zpage UI Commits List by Date</a></li>
+  <li><a href="#zpages-commits">1.2 Zpages UI Commits List</a></li>
+  <li><a href="#Zcommits">1.3 Zpages Commits Authored by Adam Garza</a></li>
 </ul>
 
 <h3 id="3-google-summer-of-code-2018-timeline">3. <a href="#timeline">Google Summer of Code 2018 Timeline</a></h3>
@@ -97,15 +99,111 @@
 
 <p><a id="migrate"></a></p>
 <h2 id="1-migrate-opencensusio-into-a-hugo-markdown-theme-1">1. Migrate OpenCensus.io into a HUGO markdown theme</h2>
-<p>The OpenCensus Development Team and Contributors were in need of a fast and easy method to add &amp; update their language specific sections of documenation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the opensource contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.</p>
+<p>The OpenCensus Development Team and Contributors were in need of a fast and easy method to add &amp; update their language specific sections of documentation on the OpenCensus.io website. The use of Markdown would allow them to add new pages and/or edit existing page content in plain text using any text editor. This liberates the developers and the Open Source contributing community from navigating cumbersome Markup modifications, allowing them to focus on the content quality and accuracy.</p>
 
-<p>Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC, I have never heard of markdown, much less know anything about the satic site generator platform of HUGO. I took this task as a programming challenge and dedicated myself to quickly learn these new platforms and concepts within a short time period. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO static site generator platform. The two topics were understandable. Straight out of the box, Hugo and markdown are simple to grasp and work with. The difficulty lies in the conversion of an existing HTML built site into a HUGO platform theme.</p>
+<p>Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website into a HUGO markdown theme. Prior to GSoC, I have never heard of markdown, much less know anything about the static site generator platform of HUGO. I took this task as a developing challenge and dedicated myself to quickly learn these new platforms and concepts within a short time period. During the bonding stage of the program, I studied every source of information regarding Markdown and the HUGO static site generator platform. The two topics were understandable. Straight out of the box, Hugo and markdown are simple to grasp, work with and implement. The difficulties lay in the conversion of an existing HTML built site into a HUGO platform theme.</p>
 
 <p><br /></p>
 
 <p><a id="migrate-challenges"></a></p>
 <h3 id="challenges-in-migration">Challenges in Migration</h3>
-<p>As I mention earlier, the concept and implementation of the HUGO platform and markdown use is easy to understand. At Web Development I’m a wizard, so I thought “Hey, I can do this easily.” In reallity, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability &amp; scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to properly rendor the site.</p>
+<p>At Web Development I’m a wizard, so I thought “Hey, I can do this easily.” As I mention earlier, the concept and implementation of the HUGO platform and markdown is easy to understand. The truth is, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability &amp; scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to render the site as close to the original site (HTML, JScript, and CSS).</p>
+
+<p>In order to build the HUGO directory structure, I divided the original site into 2 parts.</p>
+<ul>
+  <li>Theme files &amp; directories (themes directory)</li>
+  <li>Static content files &amp; directories (content, layouts, and static directory)</li>
+</ul>
+
+<p>The <code class="highlighter-rouge">theme</code> directory will house everything related to the look and feel (template) of the site. The <code class="highlighter-rouge">content, layouts &amp; static</code> directories will house everything related to the content of the site.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── <span class="nb">.</span>
+├── AUTHORS
+├── config.toml
+├── content
+│   ├── about.md
+│   ├── blog.md
+│   ├── community.md
+│   ├── cpp.md
+│   ├── docs.md
+│   ├── erlang.md
+│   ├── explorer.md
+│   ├── faq.md
+│   ├── glossary.md
+│   ├── go.md
+│   ├── gogrpc.md
+│   ├── index.md
+│   ├── java.md
+│   ├── overview.md
+│   ├── php.md
+│   ├── python.md
+│   ├── roadmap.md
+│   ├── ruby.md
+│   ├── stats.ms
+│   ├── tags.md
+│   ├── traces.md
+│   ├── troubleshooting.md
+│   └── zpages.md
+├── firebase.JSON
+├── layouts
+│   └── partials
+│       ├── contribute.html
+│       ├── footer.html
+│       ├── header.html
+│       ├── index_nav.html
+│       ├── nav.html
+│       ├── partners.html
+│       ├── statsExporter.html
+│       └── traceExporter.html
+├── LICENSE
+├── README.md
+├── static
+│   ├── 404.html
+│   ├── api
+│   │   ├── php
+│   │   └── python
+│   ├── css
+│   │   ├── responsive.css
+│   │   └── style.css
+│   ├── favicon
+│   ├── favicon.ico
+│   ├── img
+│   ├── index.html
+│   ├── js
+│   └── sitemap.xml
+└── themes
+    └── census
+        ├── archetypes
+        │   └── default.md 
+        ├── CHANGELOG.md
+        ├── layouts
+        │   ├── _default
+        │   │   └── single.html
+        │   └── shortcodes
+        │       ├── go.html
+        │       ├── java.html
+        │       ├── sc_btn.html
+        │       ├── sc_center.html
+        │       ├── sc_gloss1.html
+        │       ├── sc_indent.html
+        │       ├── sc_indent1.html
+        │       ├── sc_indent2.html
+        │       ├── sc_indent3.html
+        │       ├── sc_indent4.html
+        │       ├── sc_indent5.html
+        │       ├── sc_indent6.html
+        │       ├── sc_indent7.html
+        │       ├── sc_indent8.html
+        │       ├── sc_indent9.html
+        │       ├── sc_indent10.html
+        │       ├── sc_red.html
+        │       ├── sc_supportedExporters.html
+        │       ├── sc_supportedLanguages.html
+        │       └── snippets.html
+        ├── LICENSE.md
+        ├── README.md
+        └── theme.toml
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -211,6 +309,7 @@
   </tbody>
 </table>
 
+<p><a id="Mcommits"></a></p>
 <h3 id="centralized-migration-commits--authored-by-adam-garza-found-here">Centralized Migration Commits | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza">Here</a></h3>
 <p><br /></p>
 
@@ -229,22 +328,31 @@
   <li>Traceconfigz</li>
 </ol>
 
-<p>To acheive the base UI, I began work on the most complete set of Zpages built in Java. But, since OpenCensus will support multiple languages, I had to also create an external CSS of commonalities among the variaous zpages to be used across all languages. Basically, we need the zpages for all the supported languages to look and feel the same. To save myself from having to style each of the four zpages for every language supported, a single external CSS can acheive this, as well as, making changes in a single location very accommodating.</p>
+<p>To achieve the base UI, I began work on the most complete set of Zpages built in Java. But, since OpenCensus will support multiple languages, I had to also create an external CSS of commonalities among the various zpages to be used across all languages. Basically, we need the zpages for all the supported languages to look and feel the same. To save myself from having to style each of the four zpages for every language supported, a single external CSS can achieve this, as well as, making changes in a single location very accommodating.</p>
 
 <p><br /></p>
 
 <p><a id="zpages-challenges"></a></p>
-<h3 id="chalenges-in-zpages">Chalenges in Zpages</h3>
-<p>Some challenges I came across while working on the Zpages was the unique structure of the numerous tables used among the four Zpages. Just as everyone has a distinct hand-writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributors programming method is different.</p>
+<h3 id="challenges-in-zpages">Challenges in Zpages</h3>
+<p>Some challenges I came across while working on the Zpages were the unique structures of the numerous tables used among the four Java Zpages.</p>
 
-<p>Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS, and use a Gradle build for resource availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). Although, I</p>
+<ul>
+  <li>RpczZPageHandler</li>
+  <li>StatszZPageHandler</li>
+  <li>TracezZPageHandler</li>
+  <li>TraceConfigzZPageHandler</li>
+</ul>
 
-<p>Gradle build lines added:</p>
+<p>Just as everyone has a distinct hand-writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor’s coding method is different.</p>
+
+<p>Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS using Gradle to build the resource for availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). The problem my Java mentor and I came across was determining the relative path for access to the css resource built by Gradle.</p>
+
+<p>Gradle build (build.gradle) lines added:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sourceSets.main.resources.srcDirs = [ "src/resources/" ]
 sourceSets.main.resources.includes = [ "**/*.css" ]
 </code></pre></div></div>
 
-<p>Java rpcz handler lines added:</p>
+<p>Java rpcz handler lines added (hardcode direct path):</p>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">CSS_PATH</span> <span class="o">=</span>
         <span class="s">"/Users/username/Desktop/opencensus-java"</span> <span class="o">+</span>
         <span class="s">"/contrib/zpages/src/resources/style.css"</span><span class="o">;</span>
@@ -267,15 +375,86 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 </code></pre></div></div>
 <p><br /></p>
 
-<p>After a week of unsuccessful attempts at linking the Gradle build for external resources such as this CSS, JSON, JavaScript, etc., my Opencensus-java mentor Yang and I resolved on a work-around to the dilema.</p>
+<p>After a week of unsuccessful attempts at linking the Gradle build for external resources such as this CSS, JSON, JavaScript, etc., my Java mentor Yang and I resolved on a work-around. We decided to create a top-level class that hold the CSS as a string (seen below). Since this style class is part of the containing classes package <code class="highlighter-rouge"><span class="k">package</span> <span class="n">io</span><span class="p">.</span><span class="n">opencensus</span><span class="p">.</span><span class="n">contrib</span><span class="p">.</span><span class="n">zpages</span></code>, all the Zpage handlers have access to the resource.</p>
 
-<blockquote>
-  <p>We didn’t find a way to apply the css file to Java sources in Gradle build, so we instead put the styles in a <a href="https://github.com/census-instrumentation/opencensus-java/blob/master/contrib/zpages/src/main/java/io/opencensus/contrib/zpages/Style.java">plain Java string</a>. Other languages can simply copy and paste the styles to a css file and use it for the zpages.</p>
-</blockquote>
+<p>Style.java</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* Style.java */</span>
+<span class="kn">package</span> <span class="n">io</span><span class="o">.</span><span class="na">opencensus</span><span class="o">.</span><span class="na">contrib</span><span class="o">.</span><span class="na">zpages</span><span class="o">;</span>
 
-<ul>
-  <li>Yang Song</li>
-</ul>
+<span class="kd">final</span> <span class="kd">class</span> <span class="nc">Style</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nf">Style</span><span class="o">()</span> <span class="o">{}</span>
+
+  <span class="kd">static</span> <span class="n">String</span> <span class="n">style</span> <span class="o">=</span>
+      <span class="s">"body{font-family: 'Roboto',sans-serif;"</span>
+          <span class="o">+</span> <span class="s">"font-size: 14px;background-color: #F2F4EC;}"</span>
+          <span class="o">+</span> <span class="s">"h1{color: #3D3D3D;text-align: center;margin-bottom: 20px;}"</span>
+          <span class="o">+</span> <span class="s">"p{padding: 0 0.5em;color: #3D3D3D;}"</span>
+          <span class="o">+</span> <span class="o">...</span>
+          <span class="o">+</span> <span class="o">...;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>This now allows the every Zpage handler access to the CSS resource.</p>
+
+<p>RpcZPagehandler</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* RpcZPahehandler.java */</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">emitStyles</span><span class="o">(</span><span class="n">PrintWriter</span> <span class="n">out</span><span class="o">,</span> <span class="n">Formatter</span> <span class="n">formatter</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"&lt;style&gt;"</span><span class="o">);</span>
+    <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">Style</span><span class="o">.</span><span class="na">style</span><span class="o">);</span>
+    <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="s">"&lt;/style&gt;"</span><span class="o">);</span>
+  <span class="o">}</span>
+</code></pre></div></div>
+<p>Each handler now include the CSS resource in the <code class="highlighter-rouge">emitStyles()</code> method with the addition of <code class="highlighter-rouge">out.write(Style.style);</code></p>
+
+<p>The Java access modifiers private and protected cannot be assigned to a class. Only to constructors, methods and fields inside classes. Classes can only have the default (package) and public access modifier assigned to them.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Access Modifiers</th>
+      <th style="text-align: center">private</th>
+      <th style="text-align: center">default</th>
+      <th style="text-align: center">protected</th>
+      <th style="text-align: center">public</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Inside Class</td>
+      <td style="text-align: center">Y</td>
+      <td style="text-align: center">Y</td>
+      <td style="text-align: center">Y</td>
+      <td style="text-align: center">Y</td>
+    </tr>
+    <tr>
+      <td>Same Package Class</td>
+      <td style="text-align: center">N</td>
+      <td style="text-align: center">Y</td>
+      <td style="text-align: center">Y</td>
+      <td style="text-align: center">Y</td>
+    </tr>
+    <tr>
+      <td>Same Package Sub-Class</td>
+      <td style="text-align: center">N</td>
+      <td style="text-align: center">Y</td>
+      <td style="text-align: center">Y</td>
+      <td style="text-align: center">Y</td>
+    </tr>
+    <tr>
+      <td>Other Package Class</td>
+      <td style="text-align: center">N</td>
+      <td style="text-align: center">N</td>
+      <td style="text-align: center">N</td>
+      <td style="text-align: center">Y</td>
+    </tr>
+    <tr>
+      <td>Other Package Sub-Class</td>
+      <td style="text-align: center">N</td>
+      <td style="text-align: center">N</td>
+      <td style="text-align: center">Y</td>
+      <td style="text-align: center">Y</td>
+    </tr>
+  </tbody>
+</table>
 
 <p><br /></p>
 
@@ -305,6 +484,8 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
   </tbody>
 </table>
 
+<p><a id="Zcommits"></a></p>
+<h3 id="centralized-zpages-commits--authored-by-adam-garza-found-here">Centralized Zpages Commits | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza">Here</a></h3>
 <p><br /></p>
 
 <hr />
@@ -418,7 +599,7 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
     <ul>
       <li>Iteration 1 of migration</li>
       <li>Convert about.html to about.md</li>
-      <li>Migrate the page seemlessly</li>
+      <li>Migrate the page seamlessly</li>
     </ul>
   </li>
   <li>Week 2 (May 21 - May 25)
@@ -505,8 +686,21 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 <hr />
 <p><br />
 <a id="experience"></a></p>
-<h2 id="5-overall-experiance">5. Overall Experiance</h2>
-<p>Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and colaborative development were all forgien to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it… as an effort to breakout of my comfort zone and force myself to quickly learn and adapt.</p>
+<h2 id="5-overall-experience-1">5. Overall Experience</h2>
+<p>Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and collaborative development were all foreign to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it… as an effort to breakout of my comfort zone and commit myself to learn and adapt.</p>
+
+<p>The first few weeks of communicating and interacting with the managers, developers and collaborators of OpenCensus was intimidating for me, to say the least. But as I continued moving forward in the program - within my contact with everyone at OpenCensus, I never felt uncomfortable asking questions or explanations.</p>
+
+<p>My overall experience participating in the Google Summer of Code 2018 on OpenCensus was one of learning. GSoC has allowed me to strengthen the following skills:</p>
+<ul>
+  <li>Communication - specifically the ability to write and speak effectively and professionally</li>
+  <li>Collaboration</li>
+  <li>Time Management</li>
+  <li>Adaptability</li>
+  <li>Critical Thinking</li>
+  <li>Research and Analysis</li>
+  <li>Initiative</li>
+</ul>
 
 <p><br /></p>
 
@@ -515,11 +709,14 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 
 <p><a id="final"></a></p>
 <h2 id="6-final-thoughts-1">6. Final Thoughts</h2>
-<p>I’m not much of a writer, but I will try to make this as elequent as possible. Knowing this program is an enormous opportunity as a very green developer, I’m certain I placed an overwhelming amount of pressure upon myself to acheive. In my mind, I have always been a mediocre programmer, as I often need to reference outside resources to complete certain tasks. Although, what I lack in “know how”, I more than make up for in determination. These 12 weeks have been stressful and chalLenging, but rewarding for sure.
-We all have goals in life, and my participation in Google Summer of Code 2018 gets me one step closer to realizing mine.</p>
+<p>I’m not much of a writer, but I will try to make this as eloquent as possible. Knowing this program is an enormous opportunity for me as a green developer, I placed an overwhelming amount of pressure upon myself to achieve. Although, what I lack in “know how”, I more than make up for in determination. These 12 weeks have been stressful and challenging, yet satisfying and rewarding with the sense of accomplishment for sure.</p>
+
+<p>I would like to thank my mentor Gopi Palaniappan for this opportunity. From the very start you have been my #1 supporter, having all the confidence in me to perform well. Many times we do not know how much of an impact we have on those around us. I will like to let you know, that you have made an enormous impact and influence on what I do, and where I go from here. Thank you for all the support.</p>
+
+<p>I will also take this moment to thank Pritam Shah, for the help me plan and execute a comprehensive work plan. Jaana Burcu Dogan, thank you for helping me manage the issues with the site. Yang Song, thank you for the guidence, when I came across an issue that I could not resolve solo.</p>
 
 <blockquote>
-  <p>Many have made great sacrifices in order for me to have the oppotunities I have today. There is no better way to repay those sactifices, than to acheive when those opportunities are presented, making things better for those generations who follow behind me.</p>
+  <p>The generations of family members that have come before me have made great sacrifices in order for me to have the oppotunities I have right now. There is no better way to repay their sactifices, than to achieve when those opportunities are presented. My hope is that I somehow make things better for those who will follow.</p>
 </blockquote>
 
 <p>- Adam Garza</p>
