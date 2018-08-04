@@ -29,9 +29,9 @@ It gives you the tools to track a request as it travels through each of your ser
  * [1.3 Migration Commits Authored by Adam Garza](#Mcommits)
 
 ### 2. [Develop OpenCensus Zpages UI](#zpages)
- * [1.1 Challenges in Zpages UI](#zpages-challenges)
- * [1.2 Zpages UI Commits List](#zpages-commits)
- * [1.3 Zpages Commits Authored by Adam Garza](#Zcommits)
+ * [2.1 Challenges in Zpages UI](#zpages-challenges)
+ * [2.2 Zpages UI Commits List](#zpages-commits)
+ * [2.3 Zpages Commits Authored by Adam Garza](#Zcommits)
  
 ### 3. [Google Summer of Code 2018 Timeline](#timeline) 
  
@@ -55,7 +55,7 @@ Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website in
 <br />
 
 <a id="migrate-challenges"></a>
-### Challenges in Migration
+### 1.1 Challenges in Migration
  At Web Development I'm a wizard, so I thought "Hey, I can do this easily." As I mention earlier, the concept and implementation of the HUGO platform and markdown is easy to understand. The truth is, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability & scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to render the site as close to the original site (HTML, JScript, and CSS).
  
  In order to build the HUGO directory structure, I divided the original site into 2 parts.
@@ -156,7 +156,7 @@ Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website in
 <br />
 
 <a id="migrate-commits"></a>
-### Website Migration Commits List by Date
+### 1.2 Website Migration Commits List by Date
 
 Date | Commit Description  |
 ----------------| --------------------|
@@ -184,7 +184,7 @@ Jul 19, 2018    | [Included svg images for Stackdriver, Zipkin, Jaeger and Prome
 Jul 19, 2018    | [All partner logos have been replaced with high quality images (#183)](https://github.com/census-instrumentation/opencensus-website/commit/dfa74dcdf237d31f9a31ab3ee01e48601072e42c) |
 
 <a id="Mcommits"></a>
-### Centralized Migration Commits | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
+### 1.3 Centralized Migration Commits | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
 <br />
 
 ---
@@ -205,7 +205,7 @@ To achieve the base UI, I began work on the most complete set of Zpages built in
 <br />
 
 <a id="zpages-challenges"></a>
-### Challenges in Zpages
+### 2.1 Challenges in Zpages
 Some challenges I came across while working on the Zpages were the unique structures of the numerous tables used among the four Java Zpages.
 
 * RpczZPageHandler
@@ -294,7 +294,7 @@ Other Package Sub-Class | N | N | Y | Y
 <br />
 
 <a id="zpages-commits"></a>
-### Zpage UI Commits List by Date
+### 2.2 Zpage UI Commits List by Date
 
 Date | Commit Description  |
 ----------------| --------------------|
@@ -303,7 +303,7 @@ Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this
 Jul 31, 2018    | [Top-level style class added for Zpages use + Final commit for GSoC... (#1351)](https://github.com/census-instrumentation/opencensus-java/pull/1351)
 
 <a id="Zcommits"></a>
-### Centralized Zpages Commits | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza)
+### 2.3 Centralized Zpages Commits | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza)
 <br />
 
 ---
