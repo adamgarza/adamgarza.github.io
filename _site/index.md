@@ -12,7 +12,8 @@
  
 <br />
 ### What is OpenCensus?
-OpenCensus is single distribution of libraries that automatically collects traces and metrics from your app, displays them locally, and sends them to any analysis tool. Sounds complicated... right!
+OpenCensus is a vendor-agnostic single distribution of libraries to provide metrics collection and tracing for your services. OpenCensus provides observability for your microservices and monoliths alike.
+It gives you the tools to track a request as it travels through each of your services, and it helps you gather any metrics of interest. Sounds complicated... right!?
 
 <br />
 
