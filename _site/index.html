@@ -19,7 +19,7 @@
 {"name":"Adam Garza Purdue University","description":"Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI","@type":"WebSite","url":"http://localhost:4000/","headline":"Adam Garza Purdue University","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=bfcd3fed52521ef40e25941e227531f87189124a">
+    <link rel="stylesheet" href="/assets/css/style.css?v=afdeb7587e533f9760e7efb8dcc86b517a871f53">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -60,8 +60,8 @@
 
 <p><br /></p>
 <h3 id="what-is-opencensus">What is OpenCensus?</h3>
-<p>OpenCensus is a vendor-agnostic single distribution of libraries to provide metrics collection and tracing for your services. OpenCensus provides observability for your microservices and monoliths alike.
-It gives you the tools to track a request as it travels through each of your services, and it helps you gather any metrics of interest. Sounds complicated… right!?</p>
+<p>Application metrics and distributed traces are immensely powerful for developers, but are difficult to automatically retrieve. Based on the same technology used at Google, OpenCensus is an open source project that aims to make the collection and submission of application metrics and traces easier for developers.
+It gives developers the tools to track a request as it travels through each of the application services, and it helps gather any metrics of interest.</p>
 
 <p><br /></p>
 
@@ -75,14 +75,15 @@ It gives you the tools to track a request as it travels through each of your ser
 <ul>
   <li><a href="#migrate-challenges">1.1 Challenges in Migration</a></li>
   <li><a href="#migrate-commits">1.2 Website Migration Commits List</a></li>
-  <li><a href="#Mcommits">1.3 Migration Commits Authored by Adam Garza</a></li>
+  <li><a href="#Mcommits">1.3 Migration Pull Requests Merged Authored by Adam Garza</a></li>
 </ul>
 
 <h3 id="2-develop-opencensus-zpages-ui">2. <a href="#zpages">Develop OpenCensus Zpages UI</a></h3>
 <ul>
-  <li><a href="#zpages-challenges">1.1 Challenges in Zpages UI</a></li>
-  <li><a href="#zpages-commits">1.2 Zpages UI Commits List</a></li>
-  <li><a href="#Zcommits">1.3 Zpages Commits Authored by Adam Garza</a></li>
+  <li><a href="#zpages-challenges">2.1 Challenges in Zpages UI</a></li>
+  <li><a href="#zpages-snapshots">2.2 Zpages Snapshots</a></li>
+  <li><a href="#zpages-commits">2.3 Zpages UI Commits List</a></li>
+  <li><a href="#Zcommits">2.4 Zpages Pull Requests Merged Authored by Adam Garza</a></li>
 </ul>
 
 <h3 id="3-google-summer-of-code-2018-timeline">3. <a href="#timeline">Google Summer of Code 2018 Timeline</a></h3>
@@ -107,7 +108,7 @@ It gives you the tools to track a request as it travels through each of your ser
 <p><br /></p>
 
 <p><a id="migrate-challenges"></a></p>
-<h3 id="challenges-in-migration">Challenges in Migration</h3>
+<h3 id="11-challenges-in-migration">1.1 Challenges in Migration</h3>
 <p>At Web Development I’m a wizard, so I thought “Hey, I can do this easily.” As I mention earlier, the concept and implementation of the HUGO platform and markdown is easy to understand. The truth is, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability &amp; scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to render the site as close to the original site (HTML, JScript, and CSS).</p>
 
 <p>In order to build the HUGO directory structure, I divided the original site into 2 parts.</p>
@@ -209,7 +210,7 @@ It gives you the tools to track a request as it travels through each of your ser
 <p><br /></p>
 
 <p><a id="migrate-commits"></a></p>
-<h3 id="website-migration-commits-list-by-date">Website Migration Commits List by Date</h3>
+<h3 id="12-website-migration-commits-list-by-date">1.2 Website Migration Commits List by Date</h3>
 
 <table>
   <thead>
@@ -311,7 +312,7 @@ It gives you the tools to track a request as it travels through each of your ser
 </table>
 
 <p><a id="Mcommits"></a></p>
-<h3 id="centralized-migration-commits--authored-by-adam-garza-found-here">Centralized Migration Commits | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza">Here</a></h3>
+<h3 id="13-centralized-pull-requests-merged--authored-by-adam-garza-found-here">1.3 Centralized Pull Requests Merged | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza">Here</a></h3>
 <p><br /></p>
 
 <hr />
@@ -334,7 +335,7 @@ It gives you the tools to track a request as it travels through each of your ser
 <p><br /></p>
 
 <p><a id="zpages-challenges"></a></p>
-<h3 id="challenges-in-zpages">Challenges in Zpages</h3>
+<h3 id="21-challenges-in-zpages">2.1 Challenges in Zpages</h3>
 <p>Some challenges I came across while working on the Zpages were the unique structures of the numerous tables used among the four Java Zpages.</p>
 
 <ul>
@@ -459,8 +460,33 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 
 <p><br /></p>
 
+<p><a id="zpages-snapshots"></a></p>
+<h3 id="22-zpages-snapshots">2.2 Zpages Snapshots</h3>
+
+<p><strong>rpcZPageHandler.java</strong><br />
+<em>Landing page</em>
+<a href="img/rpcZPage.png"><img src="/img/rpcZPage.png" alt="rpc zpage image" /></a></p>
+
+<p><strong>statsZPageHandler.java</strong><br />
+<em>Stats landing page</em>
+<a href="img/statsZPage1.png"><img src="/img/statsZPage1.png" alt="stats zpage image" /></a></p>
+
+<p><strong>statsZPageHandler.java</strong><br />
+<em>Stats view grpc.io/server/server_latency/cumulative page</em>
+<a href="img/statsZPage2.png"><img src="/img/statsZPage2.png" alt="stats zpage image" /></a></p>
+
+<p><strong>traceZPageHandler.java</strong><br />
+<em>Landing page</em>
+<a href="img/traceZPage.png"><img src="/img/traceZPage.png" alt="trace zpage image" /></a></p>
+
+<p><strong>traceconfigZPageHandler.java</strong><br />
+<em>Landing page</em>
+<a href="img/traceconfigZPage.png"><img src="/img/traceconfigZPage.png" alt="traceconfig zpage image" /></a></p>
+
+<p><br /></p>
+
 <p><a id="zpages-commits"></a></p>
-<h3 id="zpage-ui-commits-list-by-date">Zpage UI Commits List by Date</h3>
+<h3 id="23-zpage-ui-commits-list-by-date">2.3 Zpage UI Commits List by Date</h3>
 
 <table>
   <thead>
@@ -486,7 +512,7 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 </table>
 
 <p><a id="Zcommits"></a></p>
-<h3 id="centralized-zpages-commits--authored-by-adam-garza-found-here">Centralized Zpages Commits | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza">Here</a></h3>
+<h3 id="24-centralized-pull-requests-merged--authored-by-adam-garza-found-here">2.4 Centralized Pull Requests Merged | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza">Here</a></h3>
 <p><br /></p>
 
 <hr />
@@ -605,79 +631,130 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
   </li>
   <li>Week 2 (May 21 - May 25)
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Iteration 2 of migration</li>
+      <li>Convert currently supported languages
+        <ul>
+          <li>cpp</li>
+          <li>go</li>
+          <li>erlang</li>
+          <li>java</li>
+          <li>php</li>
+          <li>python</li>
+          <li>ruby</li>
+        </ul>
+      </li>
+      <li>Convertion priority of pages [W2]
+        <ul>
+          <li>index</li>
+          <li>docs</li>
+          <li>guides</li>
+          <li>overview</li>
+          <li>reference</li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>Week 3 (May 28 - Jun 1)
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Iteration 3 of migration</li>
+      <li>Meet w/mentor Yaana Burcu Dogan [Developers’ group]</li>
+      <li>Convertion priority of pages [W3]
+        <ul>
+          <li>quickstart</li>
+          <li>faq</li>
+          <li>glossary</li>
+          <li>roadmap</li>
+          <li>community</li>
+          <li>spanner</li>
+          <li>gogrpc</li>
+          <li>blog</li>
+          <li>stats</li>
+          <li>tags</li>
+          <li>trace</li>
+        </ul>
+      </li>
+      <li>Commit changes</li>
     </ul>
   </li>
   <li>Week 4 (Jun 4 - Jun 8)
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Add Partners to website</li>
+      <li>Scrub the code</li>
+      <li>Commit changes</li>
+      <li>Create Pull Request</li>
+      <li>Migrate to Hugo SSG in markdown</li>
     </ul>
   </li>
   <li>Week 5 (Jun 11 - Jun 15)
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Ad hoc the website as requested</li>
+      <li>Optimize Census theme for adaptability</li>
+      <li>Optimize site for mobile</li>
+      <li>Include new blog entries</li>
     </ul>
   </li>
   <li>Week 6 (Jun 18 - Jun 22)
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Zpages research and discovery</li>
+      <li>Meet w/mentor Yang Song [Java group]</li>
+      <li>Iteration 1 - Draft template</li>
     </ul>
   </li>
   <li>Week 7 (Jun 25 - Jun 29)
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Inline styling</li>
+      <li>Iteration 2 submitted for review
+        <ul>
+          <li>rpcZPageHandler.java</li>
+          <li>statsZPageHandler.java</li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>Week 8 (Jul 2 - Jul 6)
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Inline styling</li>
+      <li>Iteration 3 submitted for review
+        <ul>
+          <li>traceZPageHandler.java</li>
+          <li>traceconfigZPageHandler.java</li>
+        </ul>
+      </li>
+      <li>Independence Day Holiday</li>
     </ul>
   </li>
   <li>Week 9 (Jul 9 - Jul 13)
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Create external CSS for Zpages to be used across languages</li>
+      <li>Test accessability of external CSS for Zpages</li>
+      <li>Review and complete website’s backlog of items</li>
+      <li>Update licensing</li>
+      <li>Convert blog to complete markdown</li>
     </ul>
   </li>
   <li>Week 10 (Jul 16 - Jul 20)
     <ul>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>Debug Java external resource path issue</li>
+      <li>Debug Gradle build resource accessability issue</li>
     </ul>
   </li>
   <li>Week 11 (Jul 23 - Jul 27)
     <ul>
-      <li></li>
-      <li></li>
+      <li>Implement Java external resources solution
+        <ul>
+          <li>Top-level private class for CSS</li>
+          <li>Lives within the same package class as the handlers</li>
+        </ul>
+      </li>
+      <li>Unify the element classes and IDs across all Zpages</li>
     </ul>
   </li>
   <li>Week 12 (Jul 30 - Aug 3)
     <ul>
-      <li></li>
-      <li></li>
+      <li>Test solution across all Zpages</li>
+      <li>Scrub the code</li>
+      <li>Commit changes</li>
+      <li>Create Pull Request</li>
     </ul>
   </li>
 </ol>

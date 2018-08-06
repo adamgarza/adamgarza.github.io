@@ -12,8 +12,8 @@
  
 <br />
 ### What is OpenCensus?
-OpenCensus is a vendor-agnostic single distribution of libraries to provide metrics collection and tracing for your services. OpenCensus provides observability for your microservices and monoliths alike.
-It gives you the tools to track a request as it travels through each of your services, and it helps you gather any metrics of interest. Sounds complicated... right!?
+Application metrics and distributed traces are immensely powerful for developers, but are difficult to automatically retrieve. Based on the same technology used at Google, OpenCensus is an open source project that aims to make the collection and submission of application metrics and traces easier for developers.
+It gives developers the tools to track a request as it travels through each of the application services, and it helps gather any metrics of interest.
 
 <br />
 
@@ -26,12 +26,13 @@ It gives you the tools to track a request as it travels through each of your ser
 ### 1. [Migrate OpenCensus.io into a HUGO markdown theme](#migrate)
  * [1.1 Challenges in Migration](#migrate-challenges)
  * [1.2 Website Migration Commits List](#migrate-commits)
- * [1.3 Migration Commits Authored by Adam Garza](#Mcommits)
+ * [1.3 Migration Pull Requests Merged Authored by Adam Garza](#Mcommits)
 
 ### 2. [Develop OpenCensus Zpages UI](#zpages)
- * [1.1 Challenges in Zpages UI](#zpages-challenges)
- * [1.2 Zpages UI Commits List](#zpages-commits)
- * [1.3 Zpages Commits Authored by Adam Garza](#Zcommits)
+ * [2.1 Challenges in Zpages UI](#zpages-challenges)
+ * [2.2 Zpages Snapshots](#zpages-snapshots)
+ * [2.3 Zpages UI Commits List](#zpages-commits)
+ * [2.4 Zpages Pull Requests Merged Authored by Adam Garza](#Zcommits)
  
 ### 3. [Google Summer of Code 2018 Timeline](#timeline) 
  
@@ -55,7 +56,7 @@ Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website in
 <br />
 
 <a id="migrate-challenges"></a>
-### Challenges in Migration
+### 1.1 Challenges in Migration
  At Web Development I'm a wizard, so I thought "Hey, I can do this easily." As I mention earlier, the concept and implementation of the HUGO platform and markdown is easy to understand. The truth is, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability & scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to render the site as close to the original site (HTML, JScript, and CSS).
  
  In order to build the HUGO directory structure, I divided the original site into 2 parts.
@@ -156,7 +157,7 @@ Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website in
 <br />
 
 <a id="migrate-commits"></a>
-### Website Migration Commits List by Date
+### 1.2 Website Migration Commits List by Date
 
 Date | Commit Description  |
 ----------------| --------------------|
@@ -184,7 +185,7 @@ Jul 19, 2018    | [Included svg images for Stackdriver, Zipkin, Jaeger and Prome
 Jul 19, 2018    | [All partner logos have been replaced with high quality images (#183)](https://github.com/census-instrumentation/opencensus-website/commit/dfa74dcdf237d31f9a31ab3ee01e48601072e42c) |
 
 <a id="Mcommits"></a>
-### Centralized Migration Commits | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
+### 1.3 Centralized Pull Requests Merged | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
 <br />
 
 ---
@@ -205,7 +206,7 @@ To achieve the base UI, I began work on the most complete set of Zpages built in
 <br />
 
 <a id="zpages-challenges"></a>
-### Challenges in Zpages
+### 2.1 Challenges in Zpages
 Some challenges I came across while working on the Zpages were the unique structures of the numerous tables used among the four Java Zpages.
 
 * RpczZPageHandler
@@ -293,8 +294,34 @@ Other Package Sub-Class | N | N | Y | Y
 
 <br />
 
+<a id="zpages-snapshots"></a>
+### 2.2 Zpages Snapshots
+
+**rpcZPageHandler.java**  
+*Landing page*
+[![rpc zpage image](img/rpcZPage.png)](img/rpcZPage.png)
+
+**statsZPageHandler.java**  
+*Stats landing page*
+[![stats zpage image](img/statsZPage1.png)](img/statsZPage1.png)
+
+**statsZPageHandler.java**  
+*Stats view grpc.io/server/server_latency/cumulative page*
+[![stats zpage image](img/statsZPage2.png)](img/statsZPage2.png)
+  
+**traceZPageHandler.java**  
+*Landing page*
+[![trace zpage image](img/traceZPage.png)](img/traceZPage.png)
+
+**traceconfigZPageHandler.java**  
+*Landing page*
+[![traceconfig zpage image](img/traceconfigZPage.png)](img/traceconfigZPage.png)
+
+
+<br />
+
 <a id="zpages-commits"></a>
-### Zpage UI Commits List by Date
+### 2.3 Zpage UI Commits List by Date
 
 Date | Commit Description  |
 ----------------| --------------------|
@@ -303,7 +330,7 @@ Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this
 Jul 31, 2018    | [Top-level style class added for Zpages use + Final commit for GSoC... (#1351)](https://github.com/census-instrumentation/opencensus-java/pull/1351)
 
 <a id="Zcommits"></a>
-### Centralized Zpages Commits | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza)
+### 2.4 Centralized Pull Requests Merged | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza)
 <br />
 
 ---
@@ -350,59 +377,92 @@ Oct | Mentor Summit at Google |
 * Migrate the page seamlessly 
 
 2. Week 2 (May 21 - May 25)
-* 
-* 
-* 
+* Iteration 2 of migration
+* Convert currently supported languages
+  * cpp
+  * go
+  * erlang
+  * java
+  * php
+  * python
+  * ruby
+* Convertion priority of pages [W2]
+  * index
+  * docs
+  * guides
+  * overview
+  * reference
 
 3. Week 3 (May 28 - Jun 1)
-* 
-* 
-* 
-* 
+* Iteration 3 of migration
+* Meet w/mentor Yaana Burcu Dogan [Developers' group]
+* Convertion priority of pages [W3]
+  * quickstart
+  * faq
+  * glossary
+  * roadmap
+  * community
+  * spanner
+  * gogrpc
+  * blog
+  * stats
+  * tags
+  * trace
+* Commit changes
 
 4. Week 4 (Jun 4 - Jun 8)
-* 
-* 
-* 
-* 
+* Add Partners to website
+* Scrub the code
+* Commit changes
+* Create Pull Request
+* Migrate to Hugo SSG in markdown
 
 5. Week 5 (Jun 11 - Jun 15)
-* 
-* 
-* 
+* Ad hoc the website as requested
+* Optimize Census theme for adaptability
+* Optimize site for mobile
+* Include new blog entries
 
 6. Week 6 (Jun 18 - Jun 22)
-* 
-* 
-* 
+* Zpages research and discovery
+* Meet w/mentor Yang Song [Java group]
+* Iteration 1 - Draft template
 
 7. Week 7 (Jun 25 - Jun 29)
-* 
-* 
-* 
+* Inline styling
+* Iteration 2 submitted for review
+  * rpcZPageHandler.java
+  * statsZPageHandler.java
 
 8. Week 8 (Jul 2 - Jul 6)
-* 
-* 
-* 
+* Inline styling
+* Iteration 3 submitted for review
+  * traceZPageHandler.java
+  * traceconfigZPageHandler.java
+* Independence Day Holiday
 
 9. Week 9 (Jul 9 - Jul 13)
-* 
-* 
-* 
+* Create external CSS for Zpages to be used across languages
+* Test accessability of external CSS for Zpages
+* Review and complete website's backlog of items
+* Update licensing
+* Convert blog to complete markdown
 
 10. Week 10 (Jul 16 - Jul 20)
-* 
-* 
-* 
+* Debug Java external resource path issue
+* Debug Gradle build resource accessability issue
 
 11. Week 11 (Jul 23 - Jul 27)
-* 
-* 
+* Implement Java external resources solution
+  * Top-level private class for CSS
+  * Lives within the same package class as the handlers
+* Unify the element classes and IDs across all Zpages 
 
 12. Week 12 (Jul 30 - Aug 3)
-* 
-* 
+* Test solution across all Zpages
+* Scrub the code
+* Commit changes
+* Create Pull Request
 
 <br />
 
