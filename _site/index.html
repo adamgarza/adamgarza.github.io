@@ -19,7 +19,7 @@
 {"name":"Adam Garza Purdue University","description":"Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI","@type":"WebSite","url":"http://localhost:4000/","headline":"Adam Garza Purdue University","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=afdeb7587e533f9760e7efb8dcc86b517a871f53">
+    <link rel="stylesheet" href="/assets/css/style.css?v=74b4b1e692f68ff29bd4c703b6db93c743b6575e">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -339,15 +339,15 @@ It gives developers the tools to track a request as it travels through each of t
 <p>Some challenges I came across while working on the Zpages were the unique structures of the numerous tables used among the four Java Zpages.</p>
 
 <ul>
-  <li>RpczZPageHandler</li>
-  <li>StatszZPageHandler</li>
-  <li>TracezZPageHandler</li>
-  <li>TraceConfigzZPageHandler</li>
+  <li>RpczZPageHandler.java</li>
+  <li>StatszZPageHandler.java</li>
+  <li>TracezZPageHandler.java</li>
+  <li>TraceConfigzZPageHandler.java</li>
 </ul>
 
 <p>Just as everyone has a distinct hand-writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor’s coding method is different.</p>
 
-<p>Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS using Gradle to build the resource for availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). The problem my Java mentor and I came across was determining the relative path for access to the css resource built by Gradle.</p>
+<p>Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS using Gradle to build the resource for availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler. The problem my Java mentor and I came across was determining the relative path for access to the css resource built by Gradle for live production.</p>
 
 <p>Gradle build (build.gradle) lines added:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sourceSets.main.resources.srcDirs = [ "src/resources/" ]
@@ -463,24 +463,24 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 <p><a id="zpages-snapshots"></a></p>
 <h3 id="22-zpages-snapshots">2.2 Zpages Snapshots</h3>
 
-<p><strong>rpcZPageHandler.java</strong><br />
+<p><strong>rpczZPageHandler.java</strong><br />
 <em>Landing page</em>
 <a href="img/rpcZPage.png"><img src="/img/rpcZPage.png" alt="rpc zpage image" /></a></p>
 
-<p><strong>statsZPageHandler.java</strong><br />
+<p><strong>StatszZPageHandler.java</strong><br />
 <em>Stats landing page</em>
 <a href="img/statsZPage1.png"><img src="/img/statsZPage1.png" alt="stats zpage image" /></a></p>
 
-<p><strong>statsZPageHandler.java</strong><br />
+<p><strong>StatszZPageHandler.java</strong><br />
 <em>Stats view grpc.io/server/server_latency/cumulative page</em>
 <a href="img/statsZPage2.png"><img src="/img/statsZPage2.png" alt="stats zpage image" /></a></p>
 
-<p><strong>traceZPageHandler.java</strong><br />
+<p><strong>TracezZPageHandler.java</strong><br />
 <em>Landing page</em>
 <a href="img/traceZPage.png"><img src="/img/traceZPage.png" alt="trace zpage image" /></a></p>
 
-<p><strong>traceconfigZPageHandler.java</strong><br />
-<em>Landing page</em>
+<p><em>TraceconfigzZPageHandler.java**<br />
+*Landing page</em>
 <a href="img/traceconfigZPage.png"><img src="/img/traceconfigZPage.png" alt="traceconfig zpage image" /></a></p>
 
 <p><br /></p>

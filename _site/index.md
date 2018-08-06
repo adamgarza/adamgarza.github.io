@@ -209,14 +209,14 @@ To achieve the base UI, I began work on the most complete set of Zpages built in
 ### 2.1 Challenges in Zpages
 Some challenges I came across while working on the Zpages were the unique structures of the numerous tables used among the four Java Zpages.
 
-* RpczZPageHandler
-* StatszZPageHandler
-* TracezZPageHandler
-* TraceConfigzZPageHandler
+* RpczZPageHandler.java
+* StatszZPageHandler.java
+* TracezZPageHandler.java
+* TraceConfigzZPageHandler.java
 
 Just as everyone has a distinct hand-writing style, so do programmers. I quickly learned that Open Source Development is a collaborative effort, and every contributor's coding method is different. 
 
-Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS using Gradle to build the resource for availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler (with help from a mentor). The problem my Java mentor and I came across was determining the relative path for access to the css resource built by Gradle.
+Yet, another challenge I faced while styling the Zpages was how to properly implement an external resource such as a CSS using Gradle to build the resource for availability. As you can see in the snippets of code below, I was able to build the resource with Gradle, and it is available to the rpcz handler. The problem my Java mentor and I came across was determining the relative path for access to the css resource built by Gradle for live production.
 
 Gradle build (build.gradle) lines added:
 ```
@@ -297,23 +297,23 @@ Other Package Sub-Class | N | N | Y | Y
 <a id="zpages-snapshots"></a>
 ### 2.2 Zpages Snapshots
 
-**rpcZPageHandler.java**  
+**rpczZPageHandler.java**  
 *Landing page*
 [![rpc zpage image](img/rpcZPage.png)](img/rpcZPage.png)
 
-**statsZPageHandler.java**  
+**StatszZPageHandler.java**  
 *Stats landing page*
 [![stats zpage image](img/statsZPage1.png)](img/statsZPage1.png)
 
-**statsZPageHandler.java**  
+**StatszZPageHandler.java**  
 *Stats view grpc.io/server/server_latency/cumulative page*
 [![stats zpage image](img/statsZPage2.png)](img/statsZPage2.png)
   
-**traceZPageHandler.java**  
+**TracezZPageHandler.java**  
 *Landing page*
 [![trace zpage image](img/traceZPage.png)](img/traceZPage.png)
 
-**traceconfigZPageHandler.java**  
+*TraceconfigzZPageHandler.java**  
 *Landing page*
 [![traceconfig zpage image](img/traceconfigZPage.png)](img/traceconfigZPage.png)
 
