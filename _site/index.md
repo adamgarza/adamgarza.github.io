@@ -185,7 +185,7 @@ Jul 19, 2018    | [Included svg images for Stackdriver, Zipkin, Jaeger and Prome
 Jul 19, 2018    | [All partner logos have been replaced with high quality images (#183)](https://github.com/census-instrumentation/opencensus-website/commit/dfa74dcdf237d31f9a31ab3ee01e48601072e42c) |
 
 <a id="Mcommits"></a>
-### 1.3 Centralized Pull Requests Merged | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
+### 1.3 Centralized Pull Requests Merged | authored by Adam Garza found [Here ![external link](img/ext.svg)](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
 <br />
 
 ---
@@ -330,7 +330,7 @@ Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this
 Jul 31, 2018    | [Top-level style class added for Zpages use + Final commit for GSoC... (#1351)](https://github.com/census-instrumentation/opencensus-java/pull/1351)
 
 <a id="Zcommits"></a>
-### 2.4 Centralized Pull Requests Merged | authored by Adam Garza found [Here](https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza)
+### 2.4 Centralized Pull Requests Merged | authored by Adam Garza found [Here ![external link](img/ext.svg)](https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza)
 <br />
 
 ---
