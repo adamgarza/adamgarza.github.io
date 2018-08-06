@@ -136,6 +136,8 @@
 
 .highlight { background-color: #f8f8f8; }
 
+code.highlighter-rouge { background-color: #F1F1F1; padding: 0 0.5em; border-radius: 2px; }
+
 body { background-color: #fff; padding: 40px; font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #727272; font-weight: 400; }
 
 h1, h2, h3, h4, h5, h6 { color: #3D3D3D; margin: 0 0 20px; }
