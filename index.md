@@ -180,11 +180,11 @@ OpenCensus.io's directory tree is seen below.
 <a id="website-snapshots"></a>
 ### 1.2 Website Snapshots | View complete site [Here ![external link](img/ext.svg)](https://opencensus-website-snapshot.firebaseapp.com/)
 
-**OpenCensus.io website**  
+**OpenCensus website**  
 *Landing page*
 [![OpenCensus landing page image](img/index.png)](https://opencensus-website-snapshot.firebaseapp.com/)
 
-**OpenCensus.io website**  
+**OpenCensus website**  
 *Overview page*
 [![OpenCensus overview page image](img/overview.png)](https://opencensus-website-snapshot.firebaseapp.com/overview/)
 
