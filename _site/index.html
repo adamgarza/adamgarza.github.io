@@ -19,7 +19,7 @@
 {"name":"Adam Garza Purdue University","description":"Migrate OpenCensus.io into HUGO markdown theme + Develop OpenCensus Zpages UI","@type":"WebSite","url":"http://localhost:4000/","headline":"Adam Garza Purdue University","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=8c828af85fbfa3e4474142d1996898a627898dd1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=1c4456e5c7a46d096d07f65c8cbe6f72fa7ae774">
     <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
@@ -57,6 +57,9 @@
 
 <h2 id="opencensusio-migration-hugo-platform-theme-wmarkdown--zpages-ui-development">OpenCensus.io Migration: Hugo Platform Theme (w/Markdown) + ZPages UI Development</h2>
 <h3 id="read-the-complete-gsoc-2018-proposal---here">Read the complete GSoC 2018 Proposal - <a href="/assets/img/Proposal-OpenCensus.pdf">Here</a></h3>
+
+<p>Mentors: Gopi Palaniappan (Primary), Pritam Shah (Secondary), Jaana Burcu Dogan (Web Dev), Yang Song (Java Dev)</p>
+
 <p><br /></p>
 
 <hr />
@@ -74,11 +77,13 @@ It gives developers the tools to track a request as it travels through each of t
 
 <h2 id="table-of-content">Table of Content</h2>
 
-<h3 id="1-migrate-opencensusio-into-a-hugo-markdown-theme">1. <a href="#migrate">Migrate OpenCensus.io into a HUGO markdown theme</a></h3>
+<h3 id="1-migrate-opencensusio-into-a-hugo-markdown-theme">1. <a href="#migrate">Migrate OpenCensus.io into a HUGO Markdown Theme</a></h3>
 <ul>
   <li><a href="#migrate-challenges">1.1 Challenges in Migration</a></li>
-  <li><a href="#migrate-commits">1.2 Website Migration Commits List</a></li>
-  <li><a href="#Mcommits">1.3 Migration Pull Requests Merged Authored by Adam Garza</a></li>
+  <li><a href="#website-snapshots">1.2 Opencensus.io Snapshots</a></li>
+  <li><a href="#migrate-commits">1.3 Website Migration Commits List</a></li>
+  <li><a href="#Mcommits">1.4 Pull Requests Merged Authored by Adam Garza</a></li>
+  <li><a href="#webRepo">1.5 OpenCensus Website GitHub Repository</a></li>
 </ul>
 
 <h3 id="2-develop-opencensus-zpages-ui">2. <a href="#zpages">Develop OpenCensus Zpages UI</a></h3>
@@ -86,7 +91,8 @@ It gives developers the tools to track a request as it travels through each of t
   <li><a href="#zpages-challenges">2.1 Challenges in Zpages UI</a></li>
   <li><a href="#zpages-snapshots">2.2 Zpages Snapshots</a></li>
   <li><a href="#zpages-commits">2.3 Zpages UI Commits List</a></li>
-  <li><a href="#Zcommits">2.4 Zpages Pull Requests Merged Authored by Adam Garza</a></li>
+  <li><a href="#Zcommits">2.4 Pull Requests Merged Authored by Adam Garza</a></li>
+  <li><a href="#javaRepo">2.5 OpenCensus Java GitHub Repository</a></li>
 </ul>
 
 <h3 id="3-google-summer-of-code-2018-timeline">3. <a href="#timeline">Google Summer of Code 2018 Timeline</a></h3>
@@ -112,16 +118,38 @@ It gives developers the tools to track a request as it travels through each of t
 
 <p><a id="migrate-challenges"></a></p>
 <h3 id="11-challenges-in-migration">1.1 Challenges in Migration</h3>
-<p>At Web Development I’m a wizard, so I thought “Hey, I can do this easily.” As I mention earlier, the concept and implementation of the HUGO platform and markdown is easy to understand. The truth is, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability &amp; scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to render the site as close to the original site (HTML, JScript, and CSS).</p>
+<p>As I mention earlier, the concept and implementation of the HUGO platform and markdown is easy to understand. At Web Development I’m a wizard, so I thought “Hey, I can do this easily.” The truth is, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability &amp; scalability. With the use of heavy JavaScript on the original site, I used a combination of markdown and shortcode to seamlessly render the markdown website as close to the original markup website (HTML, JScript, and CSS) as possible.</p>
 
-<p>In order to build the HUGO directory structure, I divided the original site into 2 parts.</p>
+<p>Within the site pages that relied heavly on JavaScript, I used what is called ‘Shortcode.’ Shortcodes are simple snippets inside your content files calling built-in or custom templates. Hugo created shortcodes to circumvent some limitations in markdown. Often authors are forced to use raw HTML+JScript functionality (i.e., accorddion expand/hide) within the markdown content. This contradicts the simplicity of markdown syntex. Shortcode is a code snippet inside a themes directory that Hugo will use to render a predefined template, such as HTML+JScript functionality.</p>
+
+<p>In order to build the HUGO directory structure, I divided the original site into 3 primary sections.</p>
 <ul>
-  <li>Theme files &amp; directories (themes directory)</li>
-  <li>Static content files &amp; directories (content, layouts, and static directory)</li>
+  <li>Theme Directory (template format)
+    <ul>
+      <li>themes</li>
+    </ul>
+  </li>
+  <li>Static Directories (localized format)
+    <ul>
+      <li>static</li>
+      <li>content</li>
+      <li>layouts</li>
+    </ul>
+  </li>
+  <li>Support Files
+    <ul>
+      <li>config.toml</li>
+      <li>firebase.JSON</li>
+      <li>.firebaserc</li>
+      <li>.travis.yml</li>
+      <li>etc.</li>
+    </ul>
+  </li>
 </ul>
 
-<p>The <code class="highlighter-rouge">theme</code> directory will house everything related to the look and feel (template) of the site. The <code class="highlighter-rouge">content, layouts &amp; static</code> directories will house everything related to the content of the site.</p>
+<p>The <code class="highlighter-rouge">themes</code> directory will house everything related to the look and feel (template format) of the site. The <code class="highlighter-rouge">content, layouts &amp; static</code> directories will house everything related to the content of the site (localized format). The <code class="highlighter-rouge">support</code> files provide needed configuration services across multiple actions, such as, estabishing the deployment pipeline - (Local repo –&gt; Github repo –&gt; TravisCI –&gt; Firebase site hosting), build scripts and many more.</p>
 
+<p>OpenCensus.io’s directory tree is seen below.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── <span class="nb">.</span>
 ├── AUTHORS
 ├── config.toml
@@ -212,8 +240,21 @@ It gives developers the tools to track a request as it travels through each of t
 
 <p><br /></p>
 
+<p><a id="website-snapshots"></a></p>
+<h3 id="12-website-snapshots--view-complete-site-here-">1.2 Website Snapshots | View complete site <a href="https://opencensus-website-snapshot.firebaseapp.com/">Here <img src="/img/ext.svg" alt="external link" /></a></h3>
+
+<p><strong>OpenCensus.io website</strong><br />
+<em>Landing page</em>
+<a href="https://opencensus-website-snapshot.firebaseapp.com/"><img src="/img/index.png" alt="OpenCensus landing page image" /></a></p>
+
+<p><strong>OpenCensus.io website</strong><br />
+<em>Overview page</em>
+<a href="https://opencensus-website-snapshot.firebaseapp.com/overview/"><img src="/img/overview.png" alt="OpenCensus overview page image" /></a></p>
+
+<p><br /></p>
+
 <p><a id="migrate-commits"></a></p>
-<h3 id="12-website-migration-commits-list-by-date">1.2 Website Migration Commits List by Date</h3>
+<h3 id="13-website-migration-commits-list-by-date">1.3 Website Migration Commits List by Date</h3>
 
 <table>
   <thead>
@@ -314,11 +355,20 @@ It gives developers the tools to track a request as it travels through each of t
   </tbody>
 </table>
 
+<p><br /></p>
+
 <p><a id="Mcommits"></a></p>
-<h3 id="13-centralized-pull-requests-merged--authored-by-adam-garza-found-here-">1.3 Centralized Pull Requests Merged | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza">Here <img src="/img/ext.svg" alt="external link" /></a></h3>
+<h3 id="14-pull-requests-merged--authored-by-adam-garza-here-">1.4 Pull Requests Merged | authored by Adam Garza <a href="https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza">Here <img src="/img/ext.svg" alt="external link" /></a></h3>
+
+<p><br /></p>
+
+<p><a id="webRepo"></a></p>
+<h3 id="15-opencensus-website-github-repository-here-">1.5 OpenCensus Website GitHub Repository <a href="https://github.com/census-instrumentation/opencensus-website/">Here <img src="/img/ext.svg" alt="external link" /></a></h3>
+
 <p><br /></p>
 
 <hr />
+
 <p><br /></p>
 
 <p><a id="zpages"></a></p>
@@ -378,6 +428,7 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
     <span class="n">STYLE</span> <span class="o">=</span> <span class="n">style</span><span class="o">;</span>
   <span class="o">}</span>
 </code></pre></div></div>
+
 <p><br /></p>
 
 <p>After a week of unsuccessful attempts at linking the Gradle build for external resources such as this CSS, JSON, JavaScript, etc., my Java mentor Yang and I resolved on a work-around. We decided to create a top-level class that hold the CSS as a string (seen below). Since this style class is part of the containing classes package <code class="highlighter-rouge"><span class="k">package</span> <span class="n">io</span><span class="p">.</span><span class="n">opencensus</span><span class="p">.</span><span class="n">contrib</span><span class="p">.</span><span class="n">zpages</span></code>, all the Zpage handlers have access to the resource.</p>
@@ -514,11 +565,20 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
   </tbody>
 </table>
 
+<p><br /></p>
+
 <p><a id="Zcommits"></a></p>
-<h3 id="24-centralized-pull-requests-merged--authored-by-adam-garza-found-here-">2.4 Centralized Pull Requests Merged | authored by Adam Garza found <a href="https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza">Here <img src="/img/ext.svg" alt="external link" /></a></h3>
+<h3 id="24-pull-requests-merged--authored-by-adam-garza-here-">2.4 Pull Requests Merged | authored by Adam Garza <a href="https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza">Here <img src="/img/ext.svg" alt="external link" /></a></h3>
+
+<p><br /></p>
+
+<p><a id="javaRepo"></a></p>
+<h3 id="25-opencensus-java-github-repository-here-">2.5 OpenCensus Java GitHub Repository <a href="https://github.com/census-instrumentation/opencensus-java/">Here <img src="/img/ext.svg" alt="external link" /></a></h3>
+
 <p><br /></p>
 
 <hr />
+
 <p><br /></p>
 
 <p><a id="timeline"></a></p>
@@ -620,11 +680,13 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 <p><br /></p>
 
 <hr />
+
 <p><br /></p>
 
 <p><a id="calendar"></a></p>
 <h2 id="4-my-gsoc-2018-keynote-calendar-1">4. My GSoC 2018 Keynote Calendar</h2>
-<p><a href="https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing"><img src="/img/calendar.png" alt="My GSoC 2018 Keynote Calendar" /></a></p>
+<p><a href="https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing"><img src="/img/calendar.png" alt="My GSoC 2018 Keynote Calendar" /></a>
+View my complete <a href="https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing">Google Summer of Code 2018 Keynote timeline. <img src="/img/ext.svg" alt="external link" /></a></p>
 
 <ol>
   <li>Week 1 (May 14 - May 18)
@@ -767,16 +829,17 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 <p><br /></p>
 
 <hr />
+
 <p><br />
 <a id="experience"></a></p>
 <h2 id="5-overall-experience-1">5. Overall Experience</h2>
-<p>Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and collaborative development were all foreign to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it… as an effort to breakout of my comfort zone and commit myself to learn and adapt.</p>
+<p>Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and collaborative development were all foreign to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it… as an effort to breakout of my comfort zone and commit myself to learn and adapt in a development ecosystem.</p>
 
 <p>The first few weeks of communicating and interacting with the managers, developers and collaborators of OpenCensus was intimidating for me, to say the least. But as I continued moving forward in the program - within my contact with everyone at OpenCensus, I never felt uncomfortable asking questions or explanations.</p>
 
 <p>My overall experience participating in the Google Summer of Code 2018 on OpenCensus was one of learning. GSoC has allowed me to strengthen the following skills:</p>
 <ul>
-  <li>Communication - specifically the ability to write and speak effectively and professionally</li>
+  <li>Communication (specifically to write and speak effectively and professionally)</li>
   <li>Collaboration</li>
   <li>Time Management</li>
   <li>Adaptability</li>
@@ -788,6 +851,7 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 <p><br /></p>
 
 <hr />
+
 <p><br /></p>
 
 <p><a id="final"></a></p>
@@ -799,7 +863,7 @@ sourceSets.main.resources.includes = [ "**/*.css" ]
 <p>I will also take this moment to thank Pritam Shah, for the help me plan and execute a comprehensive work plan. Jaana Burcu Dogan, thank you for helping me manage the issues with the site. Yang Song, thank you for the guidance, when I came across an issue that I could not resolve solo.</p>
 
 <blockquote>
-  <p>The generations of family members that have come before me have made great sacrifices in order for me to have the opportunities I have right now. There is no better way to repay their sacrifices, than to achieve when those opportunities are presented. My hope is that I somehow make things better for those who will follow.</p>
+  <p>The generations of family members that came before me have made great sacrifices in order for me to have greater opportunities for success. There is no better way for me to repay their sacrifices, than to achieve when those opportunities are presented. My hope is that I somehow make things better for the generations who follow behind me.</p>
 </blockquote>
 
 <p>- Adam Garza</p>

@@ -6,6 +6,9 @@
 
 ## OpenCensus.io Migration: Hugo Platform Theme (w/Markdown) + ZPages UI Development
 ### Read the complete GSoC 2018 Proposal - [Here](/assets/img/Proposal-OpenCensus.pdf) 
+
+Mentors: Gopi Palaniappan (Primary), Pritam Shah (Secondary), Jaana Burcu Dogan (Web Dev), Yang Song (Java Dev) 
+
 <br />
 
 ---
@@ -23,16 +26,19 @@ It gives developers the tools to track a request as it travels through each of t
 
 ## Table of Content
 
-### 1. [Migrate OpenCensus.io into a HUGO markdown theme](#migrate)
+### 1. [Migrate OpenCensus.io into a HUGO Markdown Theme](#migrate)
  * [1.1 Challenges in Migration](#migrate-challenges)
- * [1.2 Website Migration Commits List](#migrate-commits)
- * [1.3 Migration Pull Requests Merged Authored by Adam Garza](#Mcommits)
+ * [1.2 Opencensus.io Snapshots](#website-snapshots)
+ * [1.3 Website Migration Commits List](#migrate-commits)
+ * [1.4 Pull Requests Merged Authored by Adam Garza](#Mcommits)
+ * [1.5 OpenCensus Website GitHub Repository](#webRepo)
 
 ### 2. [Develop OpenCensus Zpages UI](#zpages)
  * [2.1 Challenges in Zpages UI](#zpages-challenges)
  * [2.2 Zpages Snapshots](#zpages-snapshots)
  * [2.3 Zpages UI Commits List](#zpages-commits)
- * [2.4 Zpages Pull Requests Merged Authored by Adam Garza](#Zcommits)
+ * [2.4 Pull Requests Merged Authored by Adam Garza](#Zcommits)
+ * [2.5 OpenCensus Java GitHub Repository](#javaRepo)
  
 ### 3. [Google Summer of Code 2018 Timeline](#timeline) 
  
@@ -57,14 +63,29 @@ Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website in
 
 <a id="migrate-challenges"></a>
 ### 1.1 Challenges in Migration
- At Web Development I'm a wizard, so I thought "Hey, I can do this easily." As I mention earlier, the concept and implementation of the HUGO platform and markdown is easy to understand. The truth is, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability & scalability. With the use of heavy JavaScript on the original site, I attempted to use a combination of markdown and shortcode to render the site as close to the original site (HTML, JScript, and CSS).
- 
- In order to build the HUGO directory structure, I divided the original site into 2 parts.
- * Theme files & directories (themes directory)
- * Static content files & directories (content, layouts, and static directory)
- 
- The `theme` directory will house everything related to the look and feel (template) of the site. The `content, layouts & static` directories will house everything related to the content of the site.
+As I mention earlier, the concept and implementation of the HUGO platform and markdown is easy to understand. At Web Development I'm a wizard, so I thought "Hey, I can do this easily." The truth is, it took me close to 3 weeks just to capture a good understanding of the HUGO directory structure, and how to implement best practices for the initial implementation to strengthen adaptability & scalability. With the use of heavy JavaScript on the original site, I used a combination of markdown and shortcode to seamlessly render the markdown website as close to the original markup website (HTML, JScript, and CSS) as possible.
 
+Within the site pages that relied heavly on JavaScript, I used what is called 'Shortcode.' Shortcodes are simple snippets inside your content files calling built-in or custom templates. Hugo created shortcodes to circumvent some limitations in markdown. Often authors are forced to use raw HTML+JScript functionality (i.e., accorddion expand/hide) within the markdown content. This contradicts the simplicity of markdown syntex. Shortcode is a code snippet inside a themes directory that Hugo will use to render a predefined template, such as HTML+JScript functionality.
+ 
+In order to build the HUGO directory structure, I divided the original site into 3 primary sections.
+* Theme Directory (template format)
+  * themes
+
+* Static Directories (localized format)
+  * static
+  * content
+  * layouts
+  
+* Support Files
+  * config.toml
+  * firebase.JSON
+  * .firebaserc
+  * .travis.yml
+  * etc.
+ 
+ The `themes` directory will house everything related to the look and feel (template format) of the site. The `content, layouts & static` directories will house everything related to the content of the site (localized format). The `support` files provide needed configuration services across multiple actions, such as, estabishing the deployment pipeline - (Local repo --> Github repo --> TravisCI --> Firebase site hosting), build scripts and many more.
+
+OpenCensus.io's directory tree is seen below.
 ```bash
 ├── .
 ├── AUTHORS
@@ -156,8 +177,21 @@ Part I, of my Proposal was to migrate the existing HTML OpenCensus.io website in
 
 <br />
 
+<a id="website-snapshots"></a>
+### 1.2 Website Snapshots | View complete site [Here ![external link](img/ext.svg)](https://opencensus-website-snapshot.firebaseapp.com/)
+
+**OpenCensus.io website**  
+*Landing page*
+[![OpenCensus landing page image](img/index.png)](https://opencensus-website-snapshot.firebaseapp.com/)
+
+**OpenCensus.io website**  
+*Overview page*
+[![OpenCensus overview page image](img/overview.png)](https://opencensus-website-snapshot.firebaseapp.com/overview/)
+
+<br />
+
 <a id="migrate-commits"></a>
-### 1.2 Website Migration Commits List by Date
+### 1.3 Website Migration Commits List by Date
 
 Date | Commit Description  |
 ----------------| --------------------|
@@ -184,11 +218,20 @@ Jul 16, 2018    | [Updated node.js stats as supported on languages table (#177)]
 Jul 19, 2018    | [Included svg images for Stackdriver, Zipkin, Jaeger and Prometheus logos (#181)](https://github.com/census-instrumentation/opencensus-website/commit/90feb88ad200230914748d78c2cea4375af3b31b) |
 Jul 19, 2018    | [All partner logos have been replaced with high quality images (#183)](https://github.com/census-instrumentation/opencensus-website/commit/dfa74dcdf237d31f9a31ab3ee01e48601072e42c) |
 
+<br />
+
 <a id="Mcommits"></a>
-### 1.3 Centralized Pull Requests Merged | authored by Adam Garza found [Here ![external link](img/ext.svg)](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
+### 1.4 Pull Requests Merged | authored by Adam Garza [Here ![external link](img/ext.svg)](https://github.com/census-instrumentation/opencensus-website/commits?author=adamgarza)
+
+<br />
+
+<a id="webRepo"></a>
+### 1.5 OpenCensus Website GitHub Repository [Here ![external link](img/ext.svg)](https://github.com/census-instrumentation/opencensus-website/)
+
 <br />
 
 ---
+
 <br />
 
 <a id="zpages"></a>
@@ -247,6 +290,7 @@ private static final String STYLE;
     STYLE = style;
   }
   ```
+  
 <br />
 
 After a week of unsuccessful attempts at linking the Gradle build for external resources such as this CSS, JSON, JavaScript, etc., my Java mentor Yang and I resolved on a work-around. We decided to create a top-level class that hold the CSS as a string (seen below). Since this style class is part of the containing classes package `package io.opencensus.contrib.zpages`, all the Zpage handlers have access to the resource.
@@ -329,11 +373,20 @@ Jun 10, 2018    | [Rpcz, Statsz, Tracez, and Traceconfigz page styling modificat
 Jul 24, 2018    | [Zpages external CSS added and gradle modified to include this resource (#1341)](https://github.com/census-instrumentation/opencensus-java/commit/53fc5f0e49eab37fc814f38b11352c9b19e83fe1)
 Jul 31, 2018    | [Top-level style class added for Zpages use + Final commit for GSoC... (#1351)](https://github.com/census-instrumentation/opencensus-java/pull/1351)
 
+<br />
+
 <a id="Zcommits"></a>
-### 2.4 Centralized Pull Requests Merged | authored by Adam Garza found [Here ![external link](img/ext.svg)](https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza)
+### 2.4 Pull Requests Merged | authored by Adam Garza [Here ![external link](img/ext.svg)](https://github.com/census-instrumentation/opencensus-java/commits?author=adamgarza)
+
+<br />
+
+<a id="javaRepo"></a>
+### 2.5 OpenCensus Java GitHub Repository [Here ![external link](img/ext.svg)](https://github.com/census-instrumentation/opencensus-java/)
+
 <br />
 
 ---
+
 <br />
 
 <a id="timeline"></a>
@@ -367,11 +420,13 @@ View the complete [Google Summer of Code 2018 timeline. ![external link](img/ext
 <br />
 
 ---
+
 <br />
 
 <a id="calendar"></a>
 ## 4. My GSoC 2018 Keynote Calendar
 [![My GSoC 2018 Keynote Calendar](img/calendar.png)](https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing)
+View my complete [Google Summer of Code 2018 Keynote timeline. ![external link](img/ext.svg)](https://drive.google.com/file/d/19jQN7CWXROzLMPoG6ExJF2z3PIa9NCUo/view?usp=sharing)
 
 1. Week 1 (May 14 - May 18)
 * Iteration 1 of migration
@@ -469,15 +524,16 @@ View the complete [Google Summer of Code 2018 timeline. ![external link](img/ext
 <br />
 
 ---
+
 <br />
 <a id="experience"></a>
 ## 5. Overall Experience 
-Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and collaborative development were all foreign to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and commit myself to learn and adapt.
+Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and collaborative development were all foreign to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and commit myself to learn and adapt in a development ecosystem.
 
 The first few weeks of communicating and interacting with the managers, developers and collaborators of OpenCensus was intimidating for me, to say the least. But as I continued moving forward in the program - within my contact with everyone at OpenCensus, I never felt uncomfortable asking questions or explanations.
 
 My overall experience participating in the Google Summer of Code 2018 on OpenCensus was one of learning. GSoC has allowed me to strengthen the following skills:
-* Communication - specifically the ability to write and speak effectively and professionally
+* Communication (specifically to write and speak effectively and professionally)
 * Collaboration
 * Time Management
 * Adaptability
@@ -488,6 +544,7 @@ My overall experience participating in the Google Summer of Code 2018 on OpenCen
 <br />
 
 ---
+
 <br />
 
 <a id="final"></a>
@@ -498,6 +555,6 @@ I would like to thank my mentor Gopi Palaniappan for this opportunity. From the 
 
 I will also take this moment to thank Pritam Shah, for the help me plan and execute a comprehensive work plan. Jaana Burcu Dogan, thank you for helping me manage the issues with the site. Yang Song, thank you for the guidance, when I came across an issue that I could not resolve solo.
 
->The generations of family members that have come before me have made great sacrifices in order for me to have the opportunities I have right now. There is no better way to repay their sacrifices, than to achieve when those opportunities are presented. My hope is that I somehow make things better for those who will follow.
+>The generations of family members that came before me have made great sacrifices in order for me to have greater opportunities for success. There is no better way for me to repay their sacrifices, than to achieve when those opportunities are presented. My hope is that I somehow make things better for the generations who follow behind me.
 
 \- Adam Garza
