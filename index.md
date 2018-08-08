@@ -7,7 +7,7 @@
 ## OpenCensus.io Migration: Hugo Platform Theme (w/Markdown) + ZPages UI Development
 ### Read the complete GSoC 2018 Proposal - [Here](/assets/img/Proposal-OpenCensus.pdf) 
 
-Mentors: Gopi Palaniappan (Primary), Pritam Shah (Secondary), Jaana Burcu Dogan (Web Dev), Yang Song (Java Dev) 
+Mentors: Gopi Palaniappan (Primary), Pritam Shah (Secondary), Jaana Burcu Dogan (Web Development), Yang Song (Java Development) 
 
 <br />
 
