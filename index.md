@@ -552,7 +552,7 @@ I'm not much of a writer, but I will try to make this as eloquent as possible. K
 
 I would like to thank my mentor Gopi Palaniappan for this opportunity. From the very start you have been my #1 supporter, having all the confidence in me to perform well. Many times we do not know how much of an impact we have on those around us. I will like to let you know, that you have made an enormous impact and influence on what I do, and where I go from here. Thank you for all the support.
 
-I will also take this moment to thank Pritam Shah, for the help me plan and execute a comprehensive work plan. Jaana Burcu Dogan, thank you for helping me manage the issues with the site. Yang Song, thank you for the guidance, when I came across an issue that I could not resolve solo.
+I will also take this moment to thank Pritam Shah, for helping me execute a comprehensive work plan. Jaana Burcu Dogan, thank you for helping me manage the issues with the site. Yang Song, thank you for the guidance, when I came across an issue that I could not resolve solo.
 
 >The generations of family members that came before me have made great sacrifices in order for me to have greater opportunities for success. There is no better way for me to repay their sacrifices, than to achieve when those opportunities are presented. My hope is that I somehow make things better for the generations who follow behind me.
 
