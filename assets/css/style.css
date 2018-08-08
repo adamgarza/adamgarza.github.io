@@ -223,7 +223,7 @@ footer { width: 240px; float: left; position: fixed; bottom: 50px; -webkit-font-
   header ul, header p.view { position: static; }
   pre, code { word-wrap: normal; } }
 @media only screen and (min-device-width : 375px) and (max-device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
-  body { margin: 15px; } 
+  body { padding: 15px; } 
   header ul { width: 99%; } 
   header li, header ul li + li + li { width: 33%; } 
   section { margin: 10px 0; }}
