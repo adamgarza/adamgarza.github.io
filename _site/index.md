@@ -180,11 +180,11 @@ OpenCensus.io's directory tree is seen below.
 <a id="website-snapshots"></a>
 ### 1.2 Website Snapshots | View complete site [Here ![external link](img/ext.svg)](https://opencensus-website-snapshot.firebaseapp.com/)
 
-**OpenCensus.io website**  
+**OpenCensus website**  
 *Landing page*
 [![OpenCensus landing page image](img/index.png)](https://opencensus-website-snapshot.firebaseapp.com/)
 
-**OpenCensus.io website**  
+**OpenCensus website**  
 *Overview page*
 [![OpenCensus overview page image](img/overview.png)](https://opencensus-website-snapshot.firebaseapp.com/overview/)
 
@@ -528,7 +528,7 @@ View my complete [Google Summer of Code 2018 Keynote timeline. ![external link](
 <br />
 <a id="experience"></a>
 ## 5. Overall Experience 
-Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, and collaborative development were all foreign to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and commit myself to learn and adapt in a development ecosystem.
+Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, TravisCI, Gradle, Google Cloud Platform, Remote Procedure Calls, Open Source & collaborative development... just to name a few, were all foreign to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and commit myself to learn and adapt in a development ecosystem.
 
 The first few weeks of communicating and interacting with the managers, developers and collaborators of OpenCensus was intimidating for me, to say the least. But as I continued moving forward in the program - within my contact with everyone at OpenCensus, I never felt uncomfortable asking questions or explanations.
 
