@@ -413,7 +413,6 @@ Jul 13 - Aug 6 | Work Period	Students continue working on their project with gui
 Aug 6 - 14 | Final week: Students submit their final work product and their final mentor evaluation |
 Aug 14 - Aug 21 | Mentors submit final student evaluations |
 Aug 22 | Final results of Google Summer of Code 2018 announced |
-Oct | Mentor Summit at Google |
 
 View the complete [Google Summer of Code 2018 timeline. ![external link](img/ext.svg)](https://developers.google.com/open-source/gsoc/timeline)
 
