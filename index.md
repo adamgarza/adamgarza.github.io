@@ -527,7 +527,7 @@ View my complete [Google Summer of Code 2018 Keynote timeline. ![external link](
 <br />
 <a id="experience"></a>
 ## 5. Overall Experience 
-Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, TravisCI, Gradle, Google Cloud Platform, Remote Procedure Calls, Open Source & collaborative development... just to name a few, were all foreign to me. Knowing that I might struggle throughout much of this summer program, I chose to dive into it... as an effort to breakout of my comfort zone and commit myself to learn and adapt in a development ecosystem.
+Prior to my participation in Google Summer of Code 2018, I had no experience with and in some cases have never heard of the platforms, programs or concepts used in Open Source Development. Things like Markdown, HUGO platform, Git and Github, TravisCI, Gradle, Google Cloud Platform, Remote Procedure Calls, Open Source & collaborative development... just to name a few, were all foreign to me. Knowing that I might struggle throughout this summer program, I chose to dive right in... in an effort to breakout of my comfort zone and commit myself to learning and adapting within a live open source ecosystem.
 
 The first few weeks of communicating and interacting with the managers, developers and collaborators of OpenCensus was intimidating for me, to say the least. But as I continued moving forward in the program - within my contact with everyone at OpenCensus, I never felt uncomfortable asking questions or explanations.
 
@@ -548,7 +548,7 @@ My overall experience participating in the Google Summer of Code 2018 on OpenCen
 
 <a id="final"></a>
 ## 6. Final Thoughts
-I'm not much of a writer, but I will try to make this as eloquent as possible. Knowing this program is an enormous opportunity for me as a green developer, I placed an overwhelming amount of pressure upon myself to achieve. Although, what I lack in "know how", I more than make up for in determination. These 12 weeks have been stressful and challenging, yet satisfying and rewarding with the sense of accomplishment for sure.
+I'm not much of a writer, but I will try to make this as eloquent as possible. Knowing the Google Summer of Code program is an enormous opportunity for me as a freshman developer, I placed a certain amount of pressure upon myself to achieve. Although, what I lack in "know how", I more than make up for in determination. These 12 weeks have been stressful and challenging, yet satisfying and rewarding with the sense of accomplishment for sure.
 
 I would like to thank my mentor Gopi Palaniappan for this opportunity. From the very start you have been my #1 supporter, having all the confidence in me to perform well. Many times we do not know how much of an impact we have on those around us. I will like to let you know, that you have made an enormous impact and influence on what I do, and where I go from here. Thank you for all the support.
 
