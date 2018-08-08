@@ -68,7 +68,7 @@ As I mention earlier, the concept and implementation of the HUGO platform and ma
 Within the site pages that relied heavly on JavaScript, I used what is called 'Shortcode.' Shortcodes are simple snippets inside your content files calling built-in or custom templates. Hugo created shortcodes to circumvent some limitations in markdown. Often authors are forced to use raw HTML+JScript functionality (i.e., accorddion expand/hide) within the markdown content. This contradicts the simplicity of markdown syntex. Shortcode is a code snippet inside a themes directory that Hugo will use to render a predefined template, such as HTML+JScript functionality.
  
 In order to build the HUGO directory structure, I divided the original site into 3 primary sections.
-* Theme Directory (template format)
+* Themes Directory (template format)
   * themes
 
 * Static Directories (localized format)
